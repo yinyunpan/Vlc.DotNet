@@ -60,13 +60,6 @@ namespace Vlc.DotNet.Core.Interops.Signatures
 #endif
         public MediaStateChanged MediaStateChanged;
 
-#if X86
-        [FieldOffset(8)]
-#else
-        [FieldOffset(16)]
-#endif
-        public MediaSubItemTreeAdded MediaSubItemTreeAdded;
-
         #endregion
 
         #region Media Instance

@@ -106,7 +106,6 @@
     <Compile Include="VlcMedia\VlcMedia.Events.ParsedChanged.cs" />
     <Compile Include="VlcMedia\VlcMedia.Events.StateChanged.cs" />
     <Compile Include="VlcMedia\VlcMedia.Events.SubItemAdded.cs" />
-    <Compile Include="VlcMedia\VlcMedia.Events.SubItemTreeAdded.cs" />
     <Compile Include="VlcMedia\VlcMedia.Metadatas.cs" />
     <Compile Include="VlcMedia\VlcMediaDurationChangedEventArgs.cs" />
     <Compile Include="VlcMedia\VlcMediaFreedEventArgs.cs" />
