@@ -109,7 +109,6 @@
     <Compile Include="Signatures\libvlc.h\libvlc_event_type_name.cs" />
     <Compile Include="Signatures\libvlc.h\libvlc_free.cs" />
     <Compile Include="Signatures\libvlc.h\libvlc_get_compiler.cs" />
-    <Compile Include="Signatures\libvlc.h\libvlc_log_level.cs" />
     <Compile Include="Signatures\libvlc.h\libvlc_new.cs" />
     <Compile Include="Signatures\libvlc.h\libvlc_release.cs" />
     <Compile Include="Signatures\libvlc_events.h\libvlc_event_e.cs" />
