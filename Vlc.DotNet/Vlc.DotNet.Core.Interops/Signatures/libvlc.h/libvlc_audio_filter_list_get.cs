@@ -4,9 +4,9 @@ using System.Runtime.InteropServices;
 namespace Vlc.DotNet.Core.Interops.Signatures
 {
     /// <summary>
-    /// Destroy libvlc instance.
+    /// Release a list of module descriptions.
     /// </summary>
-    [LibVlcFunction("libvlc_release")]
+    [LibVlcFunction("libvlc_audio_filter_list_get")]
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal delegate void ReleaseInstance(IntPtr instance);
+    internal delegate ModuleDescription GetAudioFilterList(IntPtr instance);
 }
