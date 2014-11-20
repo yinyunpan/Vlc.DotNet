@@ -107,42 +107,6 @@ namespace Vlc.DotNet.Core
             set { myVlcMediaPlayer.Manager.SetMediaMeta(MediaInstance, MediaMetadatas.TrackID, value); }
         }
 
-        public string TrackTotal
-        {
-            get { return GetMetaData(MediaMetadatas.TrackTotal); }
-            set { myVlcMediaPlayer.Manager.SetMediaMeta(MediaInstance, MediaMetadatas.TrackTotal, value); }
-        }
-
-        public string Director
-        {
-            get { return GetMetaData(MediaMetadatas.Director); }
-            set { myVlcMediaPlayer.Manager.SetMediaMeta(MediaInstance, MediaMetadatas.Director, value); }
-        }
-
-        public string Season
-        {
-            get { return GetMetaData(MediaMetadatas.Season); }
-            set { myVlcMediaPlayer.Manager.SetMediaMeta(MediaInstance, MediaMetadatas.Season, value); }
-        }
-
-        public string Episode
-        {
-            get { return GetMetaData(MediaMetadatas.Episode); }
-            set { myVlcMediaPlayer.Manager.SetMediaMeta(MediaInstance, MediaMetadatas.Episode, value); }
-        }
-
-        public string ShowName
-        {
-            get { return GetMetaData(MediaMetadatas.ShowName); }
-            set { myVlcMediaPlayer.Manager.SetMediaMeta(MediaInstance, MediaMetadatas.ShowName, value); }
-        }
-
-        public string Actors
-        {
-            get { return GetMetaData(MediaMetadatas.Actors); }
-            set { myVlcMediaPlayer.Manager.SetMediaMeta(MediaInstance, MediaMetadatas.Actors, value); }
-        }
-
         public void Parse()
         {
             myVlcMediaPlayer.Manager.ParseMedia(MediaInstance);

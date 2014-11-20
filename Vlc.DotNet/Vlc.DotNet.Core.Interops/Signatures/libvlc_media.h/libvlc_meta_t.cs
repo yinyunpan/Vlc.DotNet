@@ -19,11 +19,5 @@
         EncodedBy,
         ArtworkURL,
         TrackID,
-        TrackTotal,
-        Director,
-        Season,
-        Episode,
-        ShowName,
-        Actors
     }
 }
