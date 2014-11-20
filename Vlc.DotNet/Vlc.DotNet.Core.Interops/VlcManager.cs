@@ -54,33 +54,5 @@ namespace Vlc.DotNet.Core.Interops
             return myAllInstance[dynamicLinkLibrariesPath];
         }
 
-        public IEnumerable<FilterModuleDescription> GetAudioFilters()
-        {
-            var result = new List<FilterModuleDescription>();
-            var module = GetAudioFilterList();
-            result.Add(new FilterModuleDescription(module));
-            while (module.NextModule != IntPtr.Zero)
-            {
-                Marshal.PtrToStructure(module.NextModule, module);
-                result.Add(new FilterModuleDescription(module));
-            }
-            ReleaseModuleDescriptionInstance(module);
-            return result;
-        }
-
-        public IEnumerable<FilterModuleDescription> GetVideoFilters()
-        {
-            var result = new List<FilterModuleDescription>();
-            var module = GetVideoFilterList();
-            result.Add(new FilterModuleDescription(module));
-            while (module.NextModule != IntPtr.Zero)
-            {
-                Marshal.PtrToStructure(module.NextModule, module);
-                result.Add(new FilterModuleDescription(module));
-            }
-            ReleaseModuleDescriptionInstance(module);
-            return result;
-        }
-
     }
 }
