@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Vlc.DotNet.Core.Interops.Signatures;
 
@@ -78,6 +79,16 @@ namespace Vlc.DotNet.Core
             if (cloned != IntPtr.Zero)
                 return new VlcMedia(myVlcMediaPlayer, cloned);
             return null;
+        }
+
+        public MediaStats GetStatistics()
+        {
+            return myVlcMediaPlayer.Manager.GetMediaStats(MediaInstance);
+        }
+
+        public MediaTrackInfos[] GetTracksInformations()
+        {
+            return myVlcMediaPlayer.Manager.GetMediaTracksInformations(MediaInstance);
         }
 
         private void RegisterEvents()
