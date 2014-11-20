@@ -109,12 +109,12 @@ namespace Vlc.DotNet.Core
 
         public IEnumerable<FilterModuleDescription> GetAudioFilters()
         {
-            //var module = Manager.GetAudioFilterList();
-            //var result = GetSubFilter(module);
-            //if (module.Name != IntPtr.Zero)
-            //    Manager.ReleaseModuleDescriptionInstance(module);
-            //return result;
-            return null;
+            var module = Manager.GetAudioFilterList();
+            ModuleDescription nextModule = (ModuleDescription)Marshal.PtrToStructure(module, typeof(ModuleDescription));
+            var result = GetSubFilter(nextModule);
+            if (module != IntPtr.Zero)
+                Manager.ReleaseModuleDescriptionInstance(module);
+            return result;
         }
 
         private List<FilterModuleDescription> GetSubFilter(ModuleDescription module)

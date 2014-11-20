@@ -63,7 +63,6 @@
     </Compile>
     <Compile Include="Extensions\IntPtrExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="FilterModuleDescription.cs" />
     <Compile Include="LibVlcFunctionAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Signatures\libvlc.h\libvlc_video_filter_list_get.cs" />

@@ -53,6 +53,5 @@ namespace Vlc.DotNet.Core.Interops
                 myAllInstance[dynamicLinkLibrariesPath] = new VlcManager(dynamicLinkLibrariesPath);
             return myAllInstance[dynamicLinkLibrariesPath];
         }
-
     }
 }

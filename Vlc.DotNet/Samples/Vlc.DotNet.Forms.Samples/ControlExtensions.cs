@@ -16,23 +16,24 @@ namespace Vlc.DotNet.Forms.Samples
                     action(source);
                 else
                     source.Invoke(new Action(() => action(source)));
-                return source;
             }
             catch (Exception ex)
             {
                 Debug.Write("Error on 'InvokeIfRequired': {0}", ex.Message);
             }
+            return source;
         }
 #else
-        delegate void InvokeIfRequiredDelegate(Control ctrl, Action<Control> action);
+        delegate void InvokeIfRequiredDelegate<TControl>(TControl ctrl, Action<TControl> action);
 
-        public static void InvokeIfRequired(Control ctrl, Action<Control> action)
+        public static void InvokeIfRequired<TControl>(TControl ctrl, Action<TControl> action)
+              where TControl : Control
         {
             try
             {
                 if (ctrl.InvokeRequired)
                 {
-                    ctrl.Invoke(new InvokeIfRequiredDelegate(ControlExtensions.InvokeIfRequired), ctrl, action);
+                    ctrl.Invoke(new InvokeIfRequiredDelegate<TControl>(ControlExtensions.InvokeIfRequired), ctrl, action);
                 }
                 else
                 {
