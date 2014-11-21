@@ -166,6 +166,11 @@ namespace Vlc.DotNet.Core
             set { Manager.SetRate(myMediaPlayer, value); }
         }
 
+        public MediaStates State
+        {
+            get { return Manager.GetMediaPlayerState(myMediaPlayer); }
+        }
+
         private void RegisterEvents()
         {
             var eventManager = Manager.GetMediaPlayerEventManager(myMediaPlayer);

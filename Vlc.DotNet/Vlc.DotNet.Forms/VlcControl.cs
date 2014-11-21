@@ -4,6 +4,7 @@ using System.Drawing.Design;
 using System.IO;
 using System.Windows.Forms;
 using Vlc.DotNet.Core;
+using Vlc.DotNet.Core.Interops.Signatures;
 using Vlc.DotNet.Forms.TypeEditors;
 
 namespace Vlc.DotNet.Forms
@@ -143,6 +144,11 @@ namespace Vlc.DotNet.Forms
         {
             get { return myVlcMediaPlayer.Rate; }
             set { myVlcMediaPlayer.Rate = value; }
+        }
+
+        public MediaStates State
+        {
+            get { return myVlcMediaPlayer.State; }
         }
     }
 }
