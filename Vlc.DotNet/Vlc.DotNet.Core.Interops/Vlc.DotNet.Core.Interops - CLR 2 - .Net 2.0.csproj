@@ -74,6 +74,8 @@
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_get_stats.cs" />
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_track_info_t.cs" />
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_stats_t.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_position.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_position.cs" />
     <Compile Include="VlcManager.AddOptionFlagToMedia.cs" />
     <Compile Include="VlcManager.AddOptionToMedia.cs" />
     <Compile Include="VlcManager.AttachEvent.cs" />
@@ -86,6 +88,8 @@
     <Compile Include="VlcManager.CreateNewMediaFromPath.cs" />
     <Compile Include="VlcManager.DetachEvent.cs" />
     <Compile Include="VlcManager.GetAudioFilterList.cs" />
+    <Compile Include="VlcManager.GetMediaPosition.cs" />
+    <Compile Include="VlcManager.SetMediaPosition.cs" />
     <Compile Include="VlcManager.GetMediaTracksInformations.cs" />
     <Compile Include="VlcManager.GetMediaStats.cs" />
     <Compile Include="VlcManager.GetVideoFilterList.cs" />

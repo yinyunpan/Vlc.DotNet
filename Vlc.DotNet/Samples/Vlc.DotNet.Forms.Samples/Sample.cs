@@ -38,17 +38,17 @@ namespace Vlc.DotNet.Forms.Samples
 
         private void OnButtonPlayClicked(object sender, EventArgs e)
         {
-            myVlcRincewindControl.Play(new FileInfo(@"..\..\..\Vlc.DotNet\Samples\Videos\BBB trailer.mov"));
+            myVlcControl.Play(new FileInfo(@"..\..\..\Vlc.DotNet\Samples\Videos\BBB trailer.mov"));
         }
 
         private void OnButtonStopClicked(object sender, EventArgs e)
         {
-            myVlcRincewindControl.Stop();
+            myVlcControl.Stop();
         }
 
         private void OnButtonPauseClicked(object sender, EventArgs e)
         {
-            myVlcRincewindControl.Pause();
+            myVlcControl.Pause();
         }
 
         private void OnVlcMediaLengthChanged(object sender, Core.VlcMediaPlayerLengthChangedEventArgs e)
@@ -62,7 +62,7 @@ namespace Vlc.DotNet.Forms.Samples
 
         private void OnVlcPositionChanged(object sender, Core.VlcMediaPlayerPositionChangedEventArgs e)
         {
-            var position = myVlcRincewindControl.GetCurrentMedia().Duration.Ticks * e.NewPosition;
+            var position = myVlcControl.GetCurrentMedia().Duration.Ticks * e.NewPosition;
 #if !NET20
             myLblVlcPosition.InvokeIfRequired(l => l.Text = new DateTime((long)position).ToString("T"));
 #else
@@ -86,14 +86,70 @@ namespace Vlc.DotNet.Forms.Samples
 #else
             ControlExtensions.InvokeIfRequired(myLblState, c => c.Text = "Stopped");
 #endif
+            myLblAudioCodec.Text = "Codec: ";
+            myLblAudioChannels.Text = "Channels: ";
+            myLblAudioRate.Text = "Rate: ";
+            myLblVideoCodec.Text = "Codec: ";
+            myLblVideoHeight.Text = "Height: ";
+            myLblVideoWidth.Text = "Width: ";
         }
 
         private void OnVlcPlaying(object sender, Core.VlcMediaPlayerPlayingEventArgs e)
         {
 #if !NET20
             myLblState.InvokeIfRequired(l => l.Text = "Playing");
+
+            myLblAudioCodec.InvokeIfRequired(l => l.Text = "Codec: ");
+            myLblAudioChannels.InvokeIfRequired(l => l.Text = "Channels: ");
+            myLblAudioRate.InvokeIfRequired(l => l.Text = "Rate: ");
+            myLblVideoCodec.InvokeIfRequired(l => l.Text = "Codec: ");
+            myLblVideoHeight.InvokeIfRequired(l => l.Text = "Height: ");
+            myLblVideoWidth.InvokeIfRequired(l => l.Text = "Width: ");
+
+            var mediaInformations = myVlcControl.GetCurrentMedia().TracksInformations;
+            foreach (var mediaInformation in mediaInformations)
+            {
+                if (mediaInformation.Type == Core.Interops.Signatures.MediaTrackTypes.Audio)
+                {
+                    myLblAudioCodec.InvokeIfRequired(l => l.Text += mediaInformation.CodecName);
+                    myLblAudioChannels.InvokeIfRequired(l => l.Text += mediaInformation.Audio.Channels);
+                    myLblAudioRate.InvokeIfRequired(l => l.Text += mediaInformation.Audio.Rate);
+                }
+                else if (mediaInformation.Type == Core.Interops.Signatures.MediaTrackTypes.Video)
+                {
+                    myLblVideoCodec.InvokeIfRequired(l => l.Text += mediaInformation.CodecName);
+                    myLblVideoHeight.InvokeIfRequired(l => l.Text += mediaInformation.Video.Height);
+                    myLblVideoWidth.InvokeIfRequired(l => l.Text += mediaInformation.Video.Width);
+                }
+            }
+
+
 #else
             ControlExtensions.InvokeIfRequired(myLblState, c => c.Text = "Playing");
+
+            ControlExtensions.InvokeIfRequired(myLblAudioCodec, c => c.Text = "Codec: ");
+            ControlExtensions.InvokeIfRequired(myLblAudioChannels, c => c.Text = "Channels: ");
+            ControlExtensions.InvokeIfRequired(myLblAudioRate, c => c.Text = "Rate: ");
+            ControlExtensions.InvokeIfRequired(myLblVideoCodec, c => c.Text = "Codec: ");
+            ControlExtensions.InvokeIfRequired(myLblVideoHeight, c => c.Text = "Height: ");
+            ControlExtensions.InvokeIfRequired(myLblVideoWidth, c => c.Text = "Width: ");
+
+            var mediaInformations = myVlcControl.GetCurrentMedia().TracksInformations;
+            foreach (var mediaInformation in mediaInformations)
+            {
+                if (mediaInformation.Type == Core.Interops.Signatures.MediaTrackTypes.Audio)
+                {
+                    ControlExtensions.InvokeIfRequired(myLblAudioCodec, c => c.Text += mediaInformation.CodecName);
+                    ControlExtensions.InvokeIfRequired(myLblAudioChannels, c => c.Text += mediaInformation.Audio.Channels);
+                    ControlExtensions.InvokeIfRequired(myLblAudioRate, c => c.Text += mediaInformation.Audio.Rate);
+                }
+                else if (mediaInformation.Type == Core.Interops.Signatures.MediaTrackTypes.Video)
+                {
+                    ControlExtensions.InvokeIfRequired(myLblVideoCodec, c => c.Text += mediaInformation.CodecName);
+                    ControlExtensions.InvokeIfRequired(myLblVideoHeight, c => c.Text += mediaInformation.Video.Height);
+                    ControlExtensions.InvokeIfRequired(myLblVideoWidth, c => c.Text += mediaInformation.Video.Width);
+                }
+            }
 #endif
         }
 

@@ -114,6 +114,7 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_duplicate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_event_manager.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_media.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_position.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_is_playing.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_new.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_new_from_media.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_release.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_hwnd.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_media.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_position.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_stop.cs" />
     <Compile Include="VlcInteropsManager.cs" />
     <Compile Include="VlcManager.AddOptionFlagToMedia.cs" />
@@ -148,6 +150,7 @@
     <Compile Include="VlcManager.GetMediaMeta.cs" />
     <Compile Include="VlcManager.GetMediaMrl.cs" />
     <Compile Include="VlcManager.GetMediaPlayerEventManager.cs" />
+    <Compile Include="VlcManager.GetMediaPosition.cs" />
     <Compile Include="VlcManager.GetMediaState.cs" />
     <Compile Include="VlcManager.GetMediaStats.cs" />
     <Compile Include="VlcManager.GetMediaTracksInformations.cs" />
@@ -165,6 +168,7 @@
     <Compile Include="VlcManager.SaveMediaMetas.cs" />
     <Compile Include="VlcManager.SetMediaMeta.cs" />
     <Compile Include="VlcManager.SetMediaPlayerVideoHostHandle.cs" />
+    <Compile Include="VlcManager.SetMediaPosition.cs" />
     <Compile Include="VlcManager.SetMediaToMediaPlayer.cs" />
     <Compile Include="VlcManager.Stop.cs" />
     <Compile Include="Win32Interops.cs" />

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.myVlcRincewindControl = new Vlc.DotNet.Forms.VlcControl();
+            this.myVlcControl = new Vlc.DotNet.Forms.VlcControl();
             this.myBtnPlay = new System.Windows.Forms.Button();
             this.myBtnStop = new System.Windows.Forms.Button();
             this.myLblMediaLength = new System.Windows.Forms.Label();
@@ -37,27 +37,37 @@
             this.label1 = new System.Windows.Forms.Label();
             this.myLblState = new System.Windows.Forms.Label();
             this.myBtnPause = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.myVlcRincewindControl)).BeginInit();
+            this.myGrpAudioInformations = new System.Windows.Forms.GroupBox();
+            this.myGrpVideoInformations = new System.Windows.Forms.GroupBox();
+            this.myLblAudioCodec = new System.Windows.Forms.Label();
+            this.myLblAudioChannels = new System.Windows.Forms.Label();
+            this.myLblAudioRate = new System.Windows.Forms.Label();
+            this.myLblVideoWidth = new System.Windows.Forms.Label();
+            this.myLblVideoHeight = new System.Windows.Forms.Label();
+            this.myLblVideoCodec = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.myVlcControl)).BeginInit();
+            this.myGrpAudioInformations.SuspendLayout();
+            this.myGrpVideoInformations.SuspendLayout();
             this.SuspendLayout();
             // 
-            // myVlcRincewindControl
+            // myVlcControl
             // 
-            this.myVlcRincewindControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.myVlcControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.myVlcRincewindControl.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.myVlcRincewindControl.Location = new System.Drawing.Point(12, 12);
-            this.myVlcRincewindControl.Name = "myVlcRincewindControl";
-            this.myVlcRincewindControl.Size = new System.Drawing.Size(679, 338);
-            this.myVlcRincewindControl.TabIndex = 0;
-            this.myVlcRincewindControl.Text = "vlcRincewindControl1";
-            this.myVlcRincewindControl.VlcLibDirectory = null;
-            this.myVlcRincewindControl.VlcLibDirectoryNeeded += new System.EventHandler<Vlc.DotNet.Forms.VlcLibDirectoryNeededEventArgs>(this.OnVlcControlNeedLibDirectory);
-            this.myVlcRincewindControl.LengthChanged += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerLengthChangedEventArgs>(this.OnVlcMediaLengthChanged);
-            this.myVlcRincewindControl.Paused += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerPausedEventArgs>(this.OnVlcPaused);
-            this.myVlcRincewindControl.Playing += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerPlayingEventArgs>(this.OnVlcPlaying);
-            this.myVlcRincewindControl.PositionChanged += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerPositionChangedEventArgs>(this.OnVlcPositionChanged);
-            this.myVlcRincewindControl.Stopped += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerStoppedEventArgs>(this.OnVlcStopped);
+            this.myVlcControl.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.myVlcControl.Location = new System.Drawing.Point(12, 12);
+            this.myVlcControl.Name = "myVlcControl";
+            this.myVlcControl.Size = new System.Drawing.Size(564, 338);
+            this.myVlcControl.TabIndex = 0;
+            this.myVlcControl.Text = "vlcRincewindControl1";
+            this.myVlcControl.VlcLibDirectory = null;
+            this.myVlcControl.VlcLibDirectoryNeeded += new System.EventHandler<Vlc.DotNet.Forms.VlcLibDirectoryNeededEventArgs>(this.OnVlcControlNeedLibDirectory);
+            this.myVlcControl.LengthChanged += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerLengthChangedEventArgs>(this.OnVlcMediaLengthChanged);
+            this.myVlcControl.Paused += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerPausedEventArgs>(this.OnVlcPaused);
+            this.myVlcControl.Playing += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerPlayingEventArgs>(this.OnVlcPlaying);
+            this.myVlcControl.PositionChanged += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerPositionChangedEventArgs>(this.OnVlcPositionChanged);
+            this.myVlcControl.Stopped += new System.EventHandler<Vlc.DotNet.Core.VlcMediaPlayerStoppedEventArgs>(this.OnVlcStopped);
             // 
             // myBtnPlay
             // 
@@ -141,11 +151,93 @@
             this.myBtnPause.UseVisualStyleBackColor = true;
             this.myBtnPause.Click += new System.EventHandler(this.OnButtonPauseClicked);
             // 
+            // myGrpAudioInformations
+            // 
+            this.myGrpAudioInformations.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.myGrpAudioInformations.Controls.Add(this.myLblAudioRate);
+            this.myGrpAudioInformations.Controls.Add(this.myLblAudioChannels);
+            this.myGrpAudioInformations.Controls.Add(this.myLblAudioCodec);
+            this.myGrpAudioInformations.Location = new System.Drawing.Point(582, 12);
+            this.myGrpAudioInformations.Name = "myGrpAudioInformations";
+            this.myGrpAudioInformations.Size = new System.Drawing.Size(219, 77);
+            this.myGrpAudioInformations.TabIndex = 9;
+            this.myGrpAudioInformations.TabStop = false;
+            this.myGrpAudioInformations.Text = "Audio informations";
+            // 
+            // myGrpVideoInformations
+            // 
+            this.myGrpVideoInformations.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.myGrpVideoInformations.Controls.Add(this.myLblVideoWidth);
+            this.myGrpVideoInformations.Controls.Add(this.myLblVideoCodec);
+            this.myGrpVideoInformations.Controls.Add(this.myLblVideoHeight);
+            this.myGrpVideoInformations.Location = new System.Drawing.Point(582, 95);
+            this.myGrpVideoInformations.Name = "myGrpVideoInformations";
+            this.myGrpVideoInformations.Size = new System.Drawing.Size(219, 74);
+            this.myGrpVideoInformations.TabIndex = 10;
+            this.myGrpVideoInformations.TabStop = false;
+            this.myGrpVideoInformations.Text = "Video informations";
+            // 
+            // myLblAudioCodec
+            // 
+            this.myLblAudioCodec.AutoSize = true;
+            this.myLblAudioCodec.Location = new System.Drawing.Point(7, 20);
+            this.myLblAudioCodec.Name = "myLblAudioCodec";
+            this.myLblAudioCodec.Size = new System.Drawing.Size(41, 13);
+            this.myLblAudioCodec.TabIndex = 0;
+            this.myLblAudioCodec.Text = "Codec:";
+            // 
+            // myLblAudioChannels
+            // 
+            this.myLblAudioChannels.AutoSize = true;
+            this.myLblAudioChannels.Location = new System.Drawing.Point(7, 36);
+            this.myLblAudioChannels.Name = "myLblAudioChannels";
+            this.myLblAudioChannels.Size = new System.Drawing.Size(54, 13);
+            this.myLblAudioChannels.TabIndex = 1;
+            this.myLblAudioChannels.Text = "Channels:";
+            // 
+            // myLblAudioRate
+            // 
+            this.myLblAudioRate.AutoSize = true;
+            this.myLblAudioRate.Location = new System.Drawing.Point(7, 52);
+            this.myLblAudioRate.Name = "myLblAudioRate";
+            this.myLblAudioRate.Size = new System.Drawing.Size(33, 13);
+            this.myLblAudioRate.TabIndex = 2;
+            this.myLblAudioRate.Text = "Rate:";
+            // 
+            // myLblVideoWidth
+            // 
+            this.myLblVideoWidth.AutoSize = true;
+            this.myLblVideoWidth.Location = new System.Drawing.Point(6, 48);
+            this.myLblVideoWidth.Name = "myLblVideoWidth";
+            this.myLblVideoWidth.Size = new System.Drawing.Size(38, 13);
+            this.myLblVideoWidth.TabIndex = 5;
+            this.myLblVideoWidth.Text = "Width:";
+            // 
+            // myLblVideoHeight
+            // 
+            this.myLblVideoHeight.AutoSize = true;
+            this.myLblVideoHeight.Location = new System.Drawing.Point(6, 32);
+            this.myLblVideoHeight.Name = "myLblVideoHeight";
+            this.myLblVideoHeight.Size = new System.Drawing.Size(41, 13);
+            this.myLblVideoHeight.TabIndex = 4;
+            this.myLblVideoHeight.Text = "Height:";
+            // 
+            // myLblVideoCodec
+            // 
+            this.myLblVideoCodec.AutoSize = true;
+            this.myLblVideoCodec.Location = new System.Drawing.Point(6, 16);
+            this.myLblVideoCodec.Name = "myLblVideoCodec";
+            this.myLblVideoCodec.Size = new System.Drawing.Size(41, 13);
+            this.myLblVideoCodec.TabIndex = 3;
+            this.myLblVideoCodec.Text = "Codec:";
+            // 
             // Sample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 391);
+            this.ClientSize = new System.Drawing.Size(813, 391);
+            this.Controls.Add(this.myGrpVideoInformations);
+            this.Controls.Add(this.myGrpAudioInformations);
             this.Controls.Add(this.myBtnPause);
             this.Controls.Add(this.myLblState);
             this.Controls.Add(this.label1);
@@ -154,10 +246,14 @@
             this.Controls.Add(this.myLblMediaLength);
             this.Controls.Add(this.myBtnStop);
             this.Controls.Add(this.myBtnPlay);
-            this.Controls.Add(this.myVlcRincewindControl);
+            this.Controls.Add(this.myVlcControl);
             this.Name = "Sample";
             this.Text = "Vlc.DotNet - Winform Player Sample";
-            ((System.ComponentModel.ISupportInitialize)(this.myVlcRincewindControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myVlcControl)).EndInit();
+            this.myGrpAudioInformations.ResumeLayout(false);
+            this.myGrpAudioInformations.PerformLayout();
+            this.myGrpVideoInformations.ResumeLayout(false);
+            this.myGrpVideoInformations.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,7 +261,7 @@
 
         #endregion
 
-        private VlcControl myVlcRincewindControl;
+        private VlcControl myVlcControl;
         private System.Windows.Forms.Button myBtnPlay;
         private System.Windows.Forms.Button myBtnStop;
         private System.Windows.Forms.Label myLblMediaLength;
@@ -174,6 +270,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label myLblState;
         private System.Windows.Forms.Button myBtnPause;
+        private System.Windows.Forms.GroupBox myGrpAudioInformations;
+        private System.Windows.Forms.GroupBox myGrpVideoInformations;
+        private System.Windows.Forms.Label myLblAudioRate;
+        private System.Windows.Forms.Label myLblAudioChannels;
+        private System.Windows.Forms.Label myLblAudioCodec;
+        private System.Windows.Forms.Label myLblVideoWidth;
+        private System.Windows.Forms.Label myLblVideoCodec;
+        private System.Windows.Forms.Label myLblVideoHeight;
     }
 }
 
