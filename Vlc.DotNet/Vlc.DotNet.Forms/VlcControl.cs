@@ -124,5 +124,11 @@ namespace Vlc.DotNet.Forms
         {
             return myVlcMediaPlayer.GetMedia();
         }
+
+        public float Position
+        {
+            get { return myVlcMediaPlayer.Position; }
+            set { myVlcMediaPlayer.Position = value; }
+        }
     }
 }
