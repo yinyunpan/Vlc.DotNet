@@ -191,6 +191,11 @@ namespace Vlc.DotNet.Core
             get { return Manager.IsSeekable(myMediaPlayer); }
         }
 
+        public void Navigate(NavigateModes navigateMode)
+        {
+            Manager.Navigate(myMediaPlayer, navigateMode);
+        }
+
         private void RegisterEvents()
         {
             var eventManager = Manager.GetMediaPlayerEventManager(myMediaPlayer);

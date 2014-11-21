@@ -80,6 +80,7 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_fps.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_state.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_is_seekable.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_navigate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_next_frame.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_rate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_next_chapter.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_rate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_stop.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_chapter.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_navigate_mode_t.cs" />
     <Compile Include="VlcManager.AddOptionFlagToMedia.cs" />
     <Compile Include="VlcManager.AddOptionToMedia.cs" />
     <Compile Include="VlcManager.AttachEvent.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="VlcManager.GetFramesPerSecond.cs" />
     <Compile Include="VlcManager.IsPausable.cs" />
     <Compile Include="VlcManager.IsSeekable.cs" />
+    <Compile Include="VlcManager.Navigate.cs" />
     <Compile Include="VlcManager.NextFrame.cs" />
     <Compile Include="VlcManager.SetRate.cs" />
     <Compile Include="VlcManager.GetRate.cs" />
