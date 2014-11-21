@@ -113,6 +113,11 @@ namespace Vlc.DotNet.Core
             return Manager.IsPausable(myMediaPlayer);
         }
 
+        public void NextFrame()
+        {
+            Manager.NextFrame(myMediaPlayer);
+        }
+
         public IEnumerable<FilterModuleDescription> GetAudioFilters()
         {
             var module = Manager.GetAudioFilterList();
