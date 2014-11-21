@@ -4,9 +4,9 @@ using System.Runtime.InteropServices;
 namespace Vlc.DotNet.Core.Interops.Signatures
 {
     /// <summary>
-    /// Check if media player is playing.
+    /// Check if media player can pause.
     /// </summary>
-    [LibVlcFunction("libvlc_media_player_is_playing")]
+    [LibVlcFunction("libvlc_media_player_can_pause")]
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal delegate int IsPlaying(IntPtr mediaPlayerInstance);
+    internal delegate int IsPausable(IntPtr mediaPlayerInstance);
 }

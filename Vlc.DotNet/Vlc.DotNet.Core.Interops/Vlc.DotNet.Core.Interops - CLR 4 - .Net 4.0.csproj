@@ -107,6 +107,7 @@
     <Compile Include="Signatures\libvlc_media.h\libvlc_state_t.cs" />
     <Compile Include="Signatures\libvlc_media.h\libvlc_track_type_t.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_duplicate.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_can_pause.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_event_manager.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_chapter.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_chapter_count.cs" />
@@ -168,6 +169,7 @@
     <Compile Include="VlcManager.GetRate.cs" />
     <Compile Include="VlcManager.GetVideoFilterList.cs" />
     <Compile Include="VlcManager.IsParsedMedia.cs" />
+    <Compile Include="VlcManager.IsPausable.cs" />
     <Compile Include="VlcManager.IsPlaying.cs" />
     <Compile Include="VlcManager.IsSeekable.cs" />
     <Compile Include="VlcManager.ParseMedia.cs" />
