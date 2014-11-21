@@ -74,9 +74,14 @@
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_get_stats.cs" />
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_track_info_t.cs" />
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_stats_t.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_chapter.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_chapter_count.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_next_chapter.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_previous_chapter.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_position.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_position.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_stop.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_chapter.cs" />
     <Compile Include="VlcManager.AddOptionFlagToMedia.cs" />
     <Compile Include="VlcManager.AddOptionToMedia.cs" />
     <Compile Include="VlcManager.AttachEvent.cs" />
@@ -90,6 +95,10 @@
     <Compile Include="VlcManager.DetachEvent.cs" />
     <Compile Include="VlcManager.GetAudioFilterList.cs" />
     <Compile Include="VlcManager.GetMediaPosition.cs" />
+    <Compile Include="VlcManager.GetMediaChapter.cs" />
+    <Compile Include="VlcManager.GetMediaChapterCount.cs" />
+    <Compile Include="VlcManager.SetNextMediaChapter.cs" />
+    <Compile Include="VlcManager.SetPreviousMediaChapter.cs" />
     <Compile Include="VlcManager.SetMediaPosition.cs" />
     <Compile Include="VlcManager.GetMediaTracksInformations.cs" />
     <Compile Include="VlcManager.GetMediaStats.cs" />
@@ -121,6 +130,7 @@
     <Compile Include="VlcManager.SetMediaPlayerVideoHostHandle.cs" />
     <Compile Include="VlcManager.SetMediaToMediaPlayer.cs" />
     <Compile Include="VlcManager.CouldPlay.cs" />
+    <Compile Include="VlcManager.SetMediaChapter.cs" />
     <Compile Include="VlcManager.Stop.cs" />
     <Compile Include="Signatures\libvlc.h\libvlc_get_version.cs" />
     <Compile Include="Signatures\libvlc.h\libvlc_callback_t.cs" />

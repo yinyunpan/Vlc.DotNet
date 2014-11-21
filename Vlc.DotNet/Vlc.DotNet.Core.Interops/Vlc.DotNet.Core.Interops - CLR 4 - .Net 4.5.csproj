@@ -113,14 +113,19 @@
     <Compile Include="Signatures\libvlc_media.h\libvlc_track_type_t.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_duplicate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_event_manager.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_chapter.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_chapter_count.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_media.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_position.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_is_playing.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_new.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_new_from_media.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_next_chapter.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_pause.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_play.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_previous_chapter.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_release.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_chapter.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_hwnd.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_media.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_position.cs" />
@@ -146,6 +151,8 @@
     <Compile Include="VlcManager.GetCompiler.cs" />
     <Compile Include="VlcManager.GetEventTypeName.cs" />
     <Compile Include="VlcManager.GetLastErrorMessage.cs" />
+    <Compile Include="VlcManager.GetMediaChapter.cs" />
+    <Compile Include="VlcManager.GetMediaChapterCount.cs" />
     <Compile Include="VlcManager.GetMediaDuration.cs" />
     <Compile Include="VlcManager.GetMediaEventManager.cs" />
     <Compile Include="VlcManager.GetMediaFromMediaPlayer.cs" />
@@ -168,10 +175,13 @@
     <Compile Include="VlcManager.ReleaseMediaPlayer.cs" />
     <Compile Include="VlcManager.ReleaseModuleDescriptionInstance.cs" />
     <Compile Include="VlcManager.SaveMediaMetas.cs" />
+    <Compile Include="VlcManager.SetMediaChapter.cs" />
     <Compile Include="VlcManager.SetMediaMeta.cs" />
     <Compile Include="VlcManager.SetMediaPlayerVideoHostHandle.cs" />
     <Compile Include="VlcManager.SetMediaPosition.cs" />
     <Compile Include="VlcManager.SetMediaToMediaPlayer.cs" />
+    <Compile Include="VlcManager.SetNextMediaChapter.cs" />
+    <Compile Include="VlcManager.SetPreviousMediaChapter.cs" />
     <Compile Include="VlcManager.Stop.cs" />
     <Compile Include="Win32Interops.cs" />
   </ItemGroup>

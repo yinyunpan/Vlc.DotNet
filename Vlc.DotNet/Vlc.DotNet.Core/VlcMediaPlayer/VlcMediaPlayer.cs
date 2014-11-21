@@ -24,6 +24,7 @@ namespace Vlc.DotNet.Core
             Manager.CreateNewInstance(null);
             myMediaPlayer = manager.CreateMediaPlayer();
             RegisterEvents();
+            Chapters = new ChapterManagement(manager, myMediaPlayer);
         }
 
         internal VlcManager Manager { get; private set; }
@@ -157,6 +158,8 @@ namespace Vlc.DotNet.Core
             get { return Manager.CouldPlay(myMediaPlayer); }
         }
 
+        public ChapterManagement Chapters { get; private set; }
+
         private void RegisterEvents()
         {
             var eventManager = Manager.GetMediaPlayerEventManager(myMediaPlayer);
@@ -203,6 +206,39 @@ namespace Vlc.DotNet.Core
             Manager.DetachEvent(eventManager, EventTypes.MediaPlayerTimeChanged, myOnMediaPlayerTimeChangedInternalEventCallback);
             Manager.DetachEvent(eventManager, EventTypes.MediaPlayerTitleChanged, myOnMediaPlayerTitleChangedInternalEventCallback);
             Manager.DetachEvent(eventManager, EventTypes.MediaPlayerVout, myOnMediaPlayerVideoOutChangedInternalEventCallback);
+        }
+
+        public sealed class ChapterManagement
+        {
+            private readonly VlcManager myManager;
+            private readonly IntPtr myMediaPlayer;
+
+            internal ChapterManagement(VlcManager manager, IntPtr mediaPlayerInstance)
+            {
+                myManager = manager;
+                myMediaPlayer = mediaPlayerInstance;
+            }
+
+            public int Count
+            {
+                get { return myManager.GetMediaChapterCount(myMediaPlayer); }
+            }
+
+            public void Previous()
+            {
+                myManager.SetPreviousMediaChapter(myMediaPlayer);
+            }
+
+            public void Next()
+            {
+                myManager.SetNextMediaChapter(myMediaPlayer);
+            }
+
+            public int Current
+            {
+                get { return myManager.GetMediaChapter(myMediaPlayer); }
+                set { myManager.SetMediaChapter(myMediaPlayer, value); }
+            }
         }
     }
 }
