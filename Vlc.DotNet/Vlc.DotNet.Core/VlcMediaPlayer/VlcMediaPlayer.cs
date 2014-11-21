@@ -152,6 +152,11 @@ namespace Vlc.DotNet.Core
             set { Manager.SetMediaPosition(myMediaPlayer, value); }
         }
 
+        public bool CouldPlay
+        {
+            get { return Manager.CouldPlay(myMediaPlayer); }
+        }
+
         private void RegisterEvents()
         {
             var eventManager = Manager.GetMediaPlayerEventManager(myMediaPlayer);

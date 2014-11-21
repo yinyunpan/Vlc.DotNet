@@ -120,12 +120,14 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_media.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_position.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_stop.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_will_play.cs" />
     <Compile Include="VlcInteropsManager.cs" />
     <Compile Include="VlcManager.AddOptionFlagToMedia.cs" />
     <Compile Include="VlcManager.AddOptionToMedia.cs" />
     <Compile Include="VlcManager.AttachEvent.cs" />
     <Compile Include="VlcManager.ClearLastErrorMessage.cs" />
     <Compile Include="VlcManager.CloneMedia.cs" />
+    <Compile Include="VlcManager.CouldPlay.cs" />
     <Compile Include="VlcManager.CreateMediaPlayer.cs" />
     <Compile Include="VlcManager.CreateMediaPlayerFromMedia.cs" />
     <Compile Include="VlcManager.CreateNewInstance.cs" />

@@ -76,6 +76,7 @@
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_stats_t.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_position.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_position.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_stop.cs" />
     <Compile Include="VlcManager.AddOptionFlagToMedia.cs" />
     <Compile Include="VlcManager.AddOptionToMedia.cs" />
     <Compile Include="VlcManager.AttachEvent.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="VlcManager.SetMediaMeta.cs" />
     <Compile Include="VlcManager.SetMediaPlayerVideoHostHandle.cs" />
     <Compile Include="VlcManager.SetMediaToMediaPlayer.cs" />
+    <Compile Include="VlcManager.CouldPlay.cs" />
     <Compile Include="VlcManager.Stop.cs" />
     <Compile Include="Signatures\libvlc.h\libvlc_get_version.cs" />
     <Compile Include="Signatures\libvlc.h\libvlc_callback_t.cs" />
@@ -162,7 +164,7 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_release.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_hwnd.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_media.cs" />
-    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_stop.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_will_play.cs" />
     <Compile Include="VlcInteropsManager.cs" />
     <Compile Include="VlcManager.cs" />
     <Compile Include="Win32Interops.cs" />
