@@ -160,6 +160,12 @@ namespace Vlc.DotNet.Core
 
         public ChapterManagement Chapters { get; private set; }
 
+        public float Rate
+        {
+            get { return Manager.GetRate(myMediaPlayer); }
+            set { Manager.SetRate(myMediaPlayer, value); }
+        }
+
         private void RegisterEvents()
         {
             var eventManager = Manager.GetMediaPlayerEventManager(myMediaPlayer);

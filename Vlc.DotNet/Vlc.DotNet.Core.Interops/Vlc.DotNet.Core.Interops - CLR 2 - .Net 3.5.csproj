@@ -112,6 +112,7 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_chapter_count.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_media.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_position.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_rate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_is_playing.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_new.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_new_from_media.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_hwnd.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_media.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_position.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_rate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_stop.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_will_play.cs" />
     <Compile Include="VlcInteropsManager.cs" />
@@ -158,6 +160,7 @@
     <Compile Include="VlcManager.GetMediaState.cs" />
     <Compile Include="VlcManager.GetMediaStats.cs" />
     <Compile Include="VlcManager.GetMediaTracksInformations.cs" />
+    <Compile Include="VlcManager.GetRate.cs" />
     <Compile Include="VlcManager.GetVideoFilterList.cs" />
     <Compile Include="VlcManager.IsParsedMedia.cs" />
     <Compile Include="VlcManager.IsPlaying.cs" />
@@ -177,6 +180,7 @@
     <Compile Include="VlcManager.SetMediaToMediaPlayer.cs" />
     <Compile Include="VlcManager.SetNextMediaChapter.cs" />
     <Compile Include="VlcManager.SetPreviousMediaChapter.cs" />
+    <Compile Include="VlcManager.SetRate.cs" />
     <Compile Include="VlcManager.Stop.cs" />
     <Compile Include="Win32Interops.cs" />
   </ItemGroup>

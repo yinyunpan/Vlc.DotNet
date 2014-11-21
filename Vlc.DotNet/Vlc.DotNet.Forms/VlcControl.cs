@@ -130,5 +130,10 @@ namespace Vlc.DotNet.Forms
             get { return myVlcMediaPlayer.Position; }
             set { myVlcMediaPlayer.Position = value; }
         }
+        public float Rate
+        {
+            get { return myVlcMediaPlayer.Rate; }
+            set { myVlcMediaPlayer.Rate = value; }
+        }
     }
 }
