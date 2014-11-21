@@ -76,6 +76,7 @@
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_stats_t.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_chapter.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_chapter_count.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_fps.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_state.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_rate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_next_chapter.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="VlcManager.DetachEvent.cs" />
     <Compile Include="VlcManager.GetAudioFilterList.cs" />
     <Compile Include="VlcManager.GetMediaPlayerState.cs" />
+    <Compile Include="VlcManager.GetFramesPerSecond.cs" />
     <Compile Include="VlcManager.SetRate.cs" />
     <Compile Include="VlcManager.GetRate.cs" />
     <Compile Include="VlcManager.GetMediaPosition.cs" />

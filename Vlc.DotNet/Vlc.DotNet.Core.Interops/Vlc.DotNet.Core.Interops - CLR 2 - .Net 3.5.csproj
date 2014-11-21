@@ -110,6 +110,7 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_event_manager.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_chapter.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_chapter_count.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_fps.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_media.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_position.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_rate.cs" />
@@ -148,6 +149,7 @@
     <Compile Include="VlcManager.GetChangeset.cs" />
     <Compile Include="VlcManager.GetCompiler.cs" />
     <Compile Include="VlcManager.GetEventTypeName.cs" />
+    <Compile Include="VlcManager.GetFramesPerSecond.cs" />
     <Compile Include="VlcManager.GetLastErrorMessage.cs" />
     <Compile Include="VlcManager.GetMediaChapter.cs" />
     <Compile Include="VlcManager.GetMediaChapterCount.cs" />

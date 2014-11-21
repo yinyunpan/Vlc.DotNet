@@ -171,6 +171,12 @@ namespace Vlc.DotNet.Core
             get { return Manager.GetMediaPlayerState(myMediaPlayer); }
         }
 
+        public float FramesPerSecond
+        {
+            get { return Manager.GetFramesPerSecond(myMediaPlayer); }
+        }
+
+
         private void RegisterEvents()
         {
             var eventManager = Manager.GetMediaPlayerEventManager(myMediaPlayer);
