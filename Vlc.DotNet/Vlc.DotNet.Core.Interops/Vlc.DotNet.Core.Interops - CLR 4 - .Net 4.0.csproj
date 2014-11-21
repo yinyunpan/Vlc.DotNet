@@ -116,6 +116,7 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_rate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_state.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_is_playing.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_is_seekable.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_new.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_new_from_media.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_next_chapter.cs" />
@@ -168,6 +169,7 @@
     <Compile Include="VlcManager.GetVideoFilterList.cs" />
     <Compile Include="VlcManager.IsParsedMedia.cs" />
     <Compile Include="VlcManager.IsPlaying.cs" />
+    <Compile Include="VlcManager.IsSeekable.cs" />
     <Compile Include="VlcManager.ParseMedia.cs" />
     <Compile Include="VlcManager.ParseMediaAsync.cs" />
     <Compile Include="VlcManager.Pause.cs" />

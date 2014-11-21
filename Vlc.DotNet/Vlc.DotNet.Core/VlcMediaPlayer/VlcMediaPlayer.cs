@@ -176,6 +176,10 @@ namespace Vlc.DotNet.Core
             get { return Manager.GetFramesPerSecond(myMediaPlayer); }
         }
 
+        public bool IsSeekable
+        {
+            get { return Manager.IsSeekable(myMediaPlayer); }
+        }
 
         private void RegisterEvents()
         {
