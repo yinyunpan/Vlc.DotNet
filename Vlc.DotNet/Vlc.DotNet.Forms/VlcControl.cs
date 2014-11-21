@@ -13,7 +13,7 @@ namespace Vlc.DotNet.Forms
         private VlcMediaPlayer myVlcMediaPlayer;
         private readonly object myEventSyncLocker = new object();
 
-        [Editor(typeof (DirectoryEditor), typeof (UITypeEditor))]
+        [Editor(typeof(DirectoryEditor), typeof(UITypeEditor))]
         public DirectoryInfo VlcLibDirectory { get; set; }
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -130,6 +130,15 @@ namespace Vlc.DotNet.Forms
             get { return myVlcMediaPlayer.Position; }
             set { myVlcMediaPlayer.Position = value; }
         }
+
+        public VlcMediaPlayer.ChapterManagement Chapter
+        {
+            get
+            {
+                return myVlcMediaPlayer.Chapters;
+            }
+        }
+
         public float Rate
         {
             get { return myVlcMediaPlayer.Rate; }
