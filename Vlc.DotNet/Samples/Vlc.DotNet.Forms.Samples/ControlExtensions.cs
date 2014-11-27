@@ -20,6 +20,9 @@ namespace Vlc.DotNet.Forms.Samples
             }
             catch (Exception ex)
             {
+                //
+                throw new Exception(ex.Message);
+                //
                 Debug.Write("Error on 'InvokeIfRequired': {0}", ex.Message);
             }
         }
