@@ -4,12 +4,12 @@ using Vlc.DotNet.Core.Interops;
 
 namespace Vlc.DotNet.Core
 {
-    public sealed class VideoTracks : ITracksManagement
+    public sealed class TracksManagement : ITracksManagement
     {
         private readonly VlcManager myManager;
         private readonly IntPtr myMediaPlayer;
 
-        internal VideoTracks(VlcManager manager, IntPtr mediaPlayerInstance)
+        internal TracksManagement(VlcManager manager, IntPtr mediaPlayerInstance)
         {
             myManager = manager;
             myMediaPlayer = mediaPlayerInstance;

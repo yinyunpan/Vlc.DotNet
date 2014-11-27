@@ -7,7 +7,7 @@ using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core
 {
-    public interface ISubTitlesManagement : ITracksManagement
+    public interface ISubTitlesManagement : IEnumerableManagement<TrackDescription>
     {
         long Delay { get; set; }
     }

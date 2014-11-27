@@ -1,11 +1,6 @@
-﻿using System.Collections.Generic;
-
-namespace Vlc.DotNet.Core
+﻿namespace Vlc.DotNet.Core
 {
-    public interface ITracksManagement
+    public interface ITracksManagement : IEnumerableManagement<TrackDescription>
     {
-        int Count { get; }
-        TrackDescription Current { get; set; }
-        IEnumerable<TrackDescription> All { get; }
     }
 }

@@ -58,14 +58,21 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AudioManagement.cs" />
+    <Compile Include="AudioOutputDescription.cs" />
+    <Compile Include="AudioOutputDevice.cs" />
+    <Compile Include="AudioOutputDevices.cs" />
+    <Compile Include="AudioOutputsManagement.cs" />
     <Compile Include="ChapterManagement.cs" />
     <Compile Include="FilterModuleDescription.cs" />
     <Compile Include="IAdjustmentsManagement.cs" />
+    <Compile Include="IAudioManagement.cs" />
+    <Compile Include="IAudioOutputsManagement.cs" />
     <Compile Include="IChapterManagement.cs" />
     <Compile Include="ILogoManagement.cs" />
     <Compile Include="ISubTitlesManagement.cs" />
     <Compile Include="IMarqueeManagement.cs" />
-    <Compile Include="ITracksManagement.cs" />
+    <Compile Include="IEnumerableManagement.cs" />
     <Compile Include="IVideoManagement.cs" />
     <Compile Include="AdjustmentsManagement.cs" />
     <Compile Include="LogoManagement.cs" />
@@ -74,8 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.Common.cs" />
     <Compile Include="SubTitlesManagement.cs" />
     <Compile Include="TrackDescription.cs" />
+    <Compile Include="ITracksManagement.cs" />
     <Compile Include="VideoManagement.cs" />
-    <Compile Include="VideoTracks.cs" />
+    <Compile Include="TracksManagement.cs" />
     <Compile Include="VlcMediaPlayer\VlcMediaPlayer.cs" />
     <Compile Include="VlcMediaPlayer\VlcMediaPlayer.Events.Bacward.cs" />
     <Compile Include="VlcMediaPlayer\VlcMediaPlayer.Events.Buffering.cs" />

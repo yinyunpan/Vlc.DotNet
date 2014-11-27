@@ -6,7 +6,7 @@ using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core
 {
-    internal sealed class SubTitlesManagement : ISubTitlesManagement, ITracksManagement
+    internal sealed class SubTitlesManagement : ISubTitlesManagement, IEnumerableManagement<TrackDescription>
     {
         private readonly VlcManager myManager;
         private readonly IntPtr myMediaPlayer;
