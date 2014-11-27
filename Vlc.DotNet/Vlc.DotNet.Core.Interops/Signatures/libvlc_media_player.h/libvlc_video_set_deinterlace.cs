@@ -4,9 +4,9 @@ using System.Runtime.InteropServices;
 namespace Vlc.DotNet.Core.Interops.Signatures
 {
     /// <summary>
-    /// Set new video subtitle.
+    /// Enable or disable deinterlace filter.
     /// </summary>
-    [LibVlcFunction("libvlc_video_set_spu")]
+    [LibVlcFunction("libvlc_video_set_deinterlace")]
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal delegate void SetVideoSpu(IntPtr mediaPlayerInstance, int spu);
+    internal delegate void SetVideoDeinterlace(IntPtr mediaPlayerInstance, IntPtr mode);
 }

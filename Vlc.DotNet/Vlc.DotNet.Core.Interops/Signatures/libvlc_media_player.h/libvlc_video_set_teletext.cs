@@ -4,9 +4,9 @@ using System.Runtime.InteropServices;
 namespace Vlc.DotNet.Core.Interops.Signatures
 {
     /// <summary>
-    /// Set new video subtitle.
+    /// Set new teletext page to retrieve.
     /// </summary>
-    [LibVlcFunction("libvlc_video_set_spu")]
+    [LibVlcFunction("libvlc_video_set_teletext")]
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal delegate void SetVideoSpu(IntPtr mediaPlayerInstance, int spu);
+    internal delegate void SetVideoTeletext(IntPtr mediaPlayerInstance, int page);
 }

@@ -7,11 +7,8 @@ using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core
 {
-    public interface ISubTitlesManagement
+    public interface ISubTitlesManagement : ITracksManagement
     {
-        int Count { get; }
-        IEnumerable<TrackDescription> AvailableSubTitles { get; }
-        TrackDescription Current { get; set; }
         long Delay { get; set; }
     }
 

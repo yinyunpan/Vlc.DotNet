@@ -26,6 +26,7 @@ namespace Vlc.DotNet.Core
             RegisterEvents();
             Chapters = new ChapterManagement(manager, myMediaPlayer);
             SubTitles = new SubTitlesManagement(manager, myMediaPlayer);
+            Video = new VideoManagement(manager, myMediaPlayer);
         }
 
         internal VlcManager Manager { get; private set; }
@@ -198,6 +199,8 @@ namespace Vlc.DotNet.Core
         }
 
         public ISubTitlesManagement SubTitles { get; private set; }
+
+        public IVideoManagement Video { get; private set; }
 
         private void RegisterEvents()
         {

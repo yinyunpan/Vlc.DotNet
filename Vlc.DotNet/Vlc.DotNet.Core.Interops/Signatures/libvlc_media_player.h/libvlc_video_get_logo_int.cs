@@ -4,9 +4,9 @@ using System.Runtime.InteropServices;
 namespace Vlc.DotNet.Core.Interops.Signatures
 {
     /// <summary>
-    /// Set new video subtitle.
+    /// Get integer logo option.
     /// </summary>
-    [LibVlcFunction("libvlc_video_set_spu")]
+    [LibVlcFunction("libvlc_video_get_logo_int")]
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal delegate void SetVideoSpu(IntPtr mediaPlayerInstance, int spu);
+    internal delegate int GetVideoLogoInteger(IntPtr mediaPlayerInstance, VideoLogoOptions option);
 }

@@ -6,7 +6,7 @@ using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core
 {
-    internal sealed class SubTitlesManagement : ISubTitlesManagement
+    internal sealed class SubTitlesManagement : ISubTitlesManagement, ITracksManagement
     {
         private readonly VlcManager myManager;
         private readonly IntPtr myMediaPlayer;
@@ -22,36 +22,24 @@ namespace Vlc.DotNet.Core
             get { return myManager.GetVideoSpuCount(myMediaPlayer); }
         }
 
-        public IEnumerable<TrackDescription> AvailableSubTitles
+        public IEnumerable<TrackDescription> All
         {
             get
             {
                 var module = myManager.GetVideoSpuDescription(myMediaPlayer);
-                var result = GetSubTrackDescription(module);
+                var result = TrackDescription.GetSubTrackDescription(module);
                 myManager.ReleaseTrackDescription(module);
                 return result;
             }
         }
 
-        private List<TrackDescription> GetSubTrackDescription(TrackDescriptionStructure module)
-        {
-            var result = new List<TrackDescription>();
-            result.Add(new TrackDescription(module.Id, module.Name));
-            if (module.NextTrackDescription != IntPtr.Zero)
-            {
-                TrackDescriptionStructure nextModule = (TrackDescriptionStructure)Marshal.PtrToStructure(module.NextTrackDescription, typeof(TrackDescriptionStructure));
-                var data = GetSubTrackDescription(nextModule);
-                result.AddRange(data);
-            }
-            return result;
-        }
 
         public TrackDescription Current
         {
             get
             {
                 var currentId = myManager.GetVideoSpu(myMediaPlayer);
-                foreach (var availableSubTitle in AvailableSubTitles)
+                foreach (var availableSubTitle in All)
                 {
                     if (availableSubTitle.ID == currentId)
                         return availableSubTitle;

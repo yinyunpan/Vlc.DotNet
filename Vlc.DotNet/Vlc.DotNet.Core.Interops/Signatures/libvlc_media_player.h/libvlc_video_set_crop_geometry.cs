@@ -4,9 +4,9 @@ using System.Runtime.InteropServices;
 namespace Vlc.DotNet.Core.Interops.Signatures
 {
     /// <summary>
-    /// Set new video subtitle.
+    /// Set current crop filter geometry.
     /// </summary>
-    [LibVlcFunction("libvlc_video_set_spu")]
+    [LibVlcFunction("libvlc_video_set_crop_geometry")]
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal delegate void SetVideoSpu(IntPtr mediaPlayerInstance, int spu);
+    internal delegate void SetVideoCropGeometry(IntPtr mediaPlayerInstance, IntPtr cropGeometry);
 }

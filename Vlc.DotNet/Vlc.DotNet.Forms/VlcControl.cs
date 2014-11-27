@@ -150,5 +150,21 @@ namespace Vlc.DotNet.Forms
         {
             get { return myVlcMediaPlayer.State; }
         }
+
+        public ISubTitlesManagement SubTitles
+        {
+            get
+            {
+                return myVlcMediaPlayer.SubTitles;
+            }
+        }
+
+        public IVideoManagement Video
+        {
+            get
+            {
+                return myVlcMediaPlayer.Video;
+            }
+        }
     }
 }
