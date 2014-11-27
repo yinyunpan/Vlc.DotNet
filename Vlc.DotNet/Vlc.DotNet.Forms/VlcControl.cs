@@ -132,7 +132,7 @@ namespace Vlc.DotNet.Forms
             set { myVlcMediaPlayer.Position = value; }
         }
 
-        public VlcMediaPlayer.ChapterManagement Chapter
+        public IChapterManagement Chapter
         {
             get
             {

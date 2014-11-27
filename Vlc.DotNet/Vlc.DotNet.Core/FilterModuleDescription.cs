@@ -15,7 +15,7 @@ namespace Vlc.DotNet.Core
         {
         }
 
-        internal static FilterModuleDescription GetFilterModuleDescription(ModuleDescription module)
+        internal static FilterModuleDescription GetFilterModuleDescription(ModuleDescriptionStructure module)
         {
             if (module.Name == IntPtr.Zero)
                 return null;

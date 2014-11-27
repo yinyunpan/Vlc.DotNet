@@ -82,6 +82,13 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_is_seekable.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_navigate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_next_frame.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_get_spu_delay.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_get_spu.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_get_spu_count.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_set_spu_delay.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_set_spu.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_get_spu_description.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_track_description_list_release.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_rate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_next_chapter.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_previous_chapter.cs" />
@@ -90,6 +97,7 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_rate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_stop.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_chapter.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_track_description_t.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_navigate_mode_t.cs" />
     <Compile Include="VlcManager.AddOptionFlagToMedia.cs" />
     <Compile Include="VlcManager.AddOptionToMedia.cs" />
@@ -105,6 +113,13 @@
     <Compile Include="VlcManager.GetAudioFilterList.cs" />
     <Compile Include="VlcManager.GetMediaPlayerState.cs" />
     <Compile Include="VlcManager.GetFramesPerSecond.cs" />
+    <Compile Include="VlcManager.GetVideoSpuDelay.cs" />
+    <Compile Include="VlcManager.GetVideoSpu.cs" />
+    <Compile Include="VlcManager.GetVideoSpuCount.cs" />
+    <Compile Include="VlcManager.ReleaseTrackDescription.cs" />
+    <Compile Include="VlcManager.SetVideoSpuDelay.cs" />
+    <Compile Include="VlcManager.SetVideoSpu.cs" />
+    <Compile Include="VlcManager.GetVideoSpuDescription.cs" />
     <Compile Include="VlcManager.IsPausable.cs" />
     <Compile Include="VlcManager.IsSeekable.cs" />
     <Compile Include="VlcManager.Navigate.cs" />
@@ -180,7 +195,7 @@
     <Compile Include="Signatures\libvlc_media.h\libvlc_meta_t.cs" />
     <Compile Include="Signatures\libvlc_media.h\libvlc_state_t.cs" />
     <Compile Include="Signatures\libvlc_media.h\libvlc_track_type_t.cs" />
-    <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_duplicate.cs" />
+    <Compile Include="Signatures\libvlc_media.h\libvlc_media_duplicate.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_event_manager.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_get_media.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_is_playing.cs" />

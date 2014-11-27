@@ -25,6 +25,7 @@ namespace Vlc.DotNet.Core
             myMediaPlayer = manager.CreateMediaPlayer();
             RegisterEvents();
             Chapters = new ChapterManagement(manager, myMediaPlayer);
+            SubTitles = new SubTitlesManagement(manager, myMediaPlayer);
         }
 
         internal VlcManager Manager { get; private set; }
@@ -121,14 +122,14 @@ namespace Vlc.DotNet.Core
         public IEnumerable<FilterModuleDescription> GetAudioFilters()
         {
             var module = Manager.GetAudioFilterList();
-            ModuleDescription nextModule = (ModuleDescription)Marshal.PtrToStructure(module, typeof(ModuleDescription));
+            ModuleDescriptionStructure nextModule = (ModuleDescriptionStructure)Marshal.PtrToStructure(module, typeof(ModuleDescriptionStructure));
             var result = GetSubFilter(nextModule);
             if (module != IntPtr.Zero)
                 Manager.ReleaseModuleDescriptionInstance(module);
             return result;
         }
 
-        private List<FilterModuleDescription> GetSubFilter(ModuleDescription module)
+        private List<FilterModuleDescription> GetSubFilter(ModuleDescriptionStructure module)
         {
             var result = new List<FilterModuleDescription>();
             var filterModule = FilterModuleDescription.GetFilterModuleDescription(module);
@@ -139,7 +140,7 @@ namespace Vlc.DotNet.Core
             result.Add(filterModule);
             if (module.NextModule != IntPtr.Zero)
             {
-                ModuleDescription nextModule = (ModuleDescription)Marshal.PtrToStructure(module.NextModule, typeof(ModuleDescription));
+                ModuleDescriptionStructure nextModule = (ModuleDescriptionStructure)Marshal.PtrToStructure(module.NextModule, typeof(ModuleDescriptionStructure));
                 var data = GetSubFilter(nextModule);
                 if (data.Count > 0)
                     result.AddRange(data);
@@ -150,7 +151,7 @@ namespace Vlc.DotNet.Core
         public IEnumerable<FilterModuleDescription> GetVideoFilters()
         {
             var module = Manager.GetVideoFilterList();
-            ModuleDescription nextModule = (ModuleDescription)Marshal.PtrToStructure(module, typeof(ModuleDescription));
+            ModuleDescriptionStructure nextModule = (ModuleDescriptionStructure)Marshal.PtrToStructure(module, typeof(ModuleDescriptionStructure));
             var result = GetSubFilter(nextModule);
             if (module != IntPtr.Zero)
                 Manager.ReleaseModuleDescriptionInstance(module);
@@ -168,7 +169,7 @@ namespace Vlc.DotNet.Core
             get { return Manager.CouldPlay(myMediaPlayer); }
         }
 
-        public ChapterManagement Chapters { get; private set; }
+        public IChapterManagement Chapters { get; private set; }
 
         public float Rate
         {
@@ -195,6 +196,8 @@ namespace Vlc.DotNet.Core
         {
             Manager.Navigate(myMediaPlayer, navigateMode);
         }
+
+        public ISubTitlesManagement SubTitles { get; private set; }
 
         private void RegisterEvents()
         {
@@ -242,39 +245,6 @@ namespace Vlc.DotNet.Core
             Manager.DetachEvent(eventManager, EventTypes.MediaPlayerTimeChanged, myOnMediaPlayerTimeChangedInternalEventCallback);
             Manager.DetachEvent(eventManager, EventTypes.MediaPlayerTitleChanged, myOnMediaPlayerTitleChangedInternalEventCallback);
             Manager.DetachEvent(eventManager, EventTypes.MediaPlayerVout, myOnMediaPlayerVideoOutChangedInternalEventCallback);
-        }
-
-        public sealed class ChapterManagement
-        {
-            private readonly VlcManager myManager;
-            private readonly IntPtr myMediaPlayer;
-
-            internal ChapterManagement(VlcManager manager, IntPtr mediaPlayerInstance)
-            {
-                myManager = manager;
-                myMediaPlayer = mediaPlayerInstance;
-            }
-
-            public int Count
-            {
-                get { return myManager.GetMediaChapterCount(myMediaPlayer); }
-            }
-
-            public void Previous()
-            {
-                myManager.SetPreviousMediaChapter(myMediaPlayer);
-            }
-
-            public void Next()
-            {
-                myManager.SetNextMediaChapter(myMediaPlayer);
-            }
-
-            public int Current
-            {
-                get { return myManager.GetMediaChapter(myMediaPlayer); }
-                set { myManager.SetMediaChapter(myMediaPlayer, value); }
-            }
         }
     }
 }

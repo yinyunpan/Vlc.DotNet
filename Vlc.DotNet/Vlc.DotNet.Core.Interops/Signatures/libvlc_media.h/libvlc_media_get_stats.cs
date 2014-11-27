@@ -8,5 +8,5 @@ namespace Vlc.DotNet.Core.Interops.Signatures
     /// </summary>
     [LibVlcFunction("libvlc_media_get_stats")]
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal delegate int GetMediaStats(IntPtr mediaInstance, out MediaStats stats);
+    internal delegate int GetMediaStats(IntPtr mediaInstance, out MediaStatsStructure stats);
 }

@@ -3,7 +3,7 @@
 namespace Vlc.DotNet.Core.Interops.Signatures
 {
     [StructLayout(LayoutKind.Sequential)]
-    public struct MediaStats
+    public struct MediaStatsStructure
     {
         /* Input */
         public int ReadBytes;

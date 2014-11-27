@@ -81,12 +81,12 @@ namespace Vlc.DotNet.Core
             return null;
         }
 
-        public MediaStats Statistics
+        public MediaStatsStructure Statistics
         {
             get { return myVlcMediaPlayer.Manager.GetMediaStats(MediaInstance); }
         }
 
-        public MediaTrackInfos[] TracksInformations
+        public MediaTrackInfosStructure[] TracksInformations
         {
             get { return myVlcMediaPlayer.Manager.GetMediaTracksInformations(MediaInstance); }
         }

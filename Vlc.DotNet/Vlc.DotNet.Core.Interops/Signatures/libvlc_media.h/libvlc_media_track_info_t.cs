@@ -5,7 +5,7 @@ namespace Vlc.DotNet.Core.Interops.Signatures
 {
 
     [StructLayout(LayoutKind.Explicit)]
-    public struct MediaTrackInfos
+    public struct MediaTrackInfosStructure
     {
         /// <summary>
         /// Codec Value
@@ -61,7 +61,7 @@ namespace Vlc.DotNet.Core.Interops.Signatures
 #else
         [FieldOffset(20)]
 #endif
-        public AudioStruct Audio;
+        public AudioStructure Audio;
 
         /// <summary>
         /// Video Track Info
@@ -71,7 +71,7 @@ namespace Vlc.DotNet.Core.Interops.Signatures
 #else
         [FieldOffset(20)]
 #endif
-        public VideoStruct Video;
+        public VideoStructure Video;
 
         /// <summary>
         /// Codec Abbreviation
@@ -104,7 +104,7 @@ namespace Vlc.DotNet.Core.Interops.Signatures
     /// <summary>
     /// Audio information of Media Track
     /// </summary>
-    public struct AudioStruct
+    public struct AudioStructure
     {
         /// <summary>
         /// Number of Channels
@@ -120,7 +120,7 @@ namespace Vlc.DotNet.Core.Interops.Signatures
     /// <summary>
     /// Video information of Media Track
     /// </summary>
-    public struct VideoStruct
+    public struct VideoStructure
     {
         /// <summary>
         /// Height of Video
