@@ -60,12 +60,14 @@
   <ItemGroup>
     <Compile Include="ChapterManagement.cs" />
     <Compile Include="FilterModuleDescription.cs" />
+    <Compile Include="IAdjustmentsManagement.cs" />
     <Compile Include="IChapterManagement.cs" />
     <Compile Include="ILogoManagement.cs" />
     <Compile Include="ISubTitlesManagement.cs" />
     <Compile Include="IMarqueeManagement.cs" />
     <Compile Include="ITracksManagement.cs" />
     <Compile Include="IVideoManagement.cs" />
+    <Compile Include="AdjustmentsManagement.cs" />
     <Compile Include="LogoManagement.cs" />
     <Compile Include="MarqueeManagement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -74,9 +74,14 @@
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_get_stats.cs" />
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_track_info_t.cs" />
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_stats_t.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_get_adjust_float.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_get_logo_int.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_get_adjust_int.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_get_marquee_string - Copy.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_adjust_option_t.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_logo_option_t.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_set_adjust_float.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_set_adjust_int.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_set_logo_int.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_set_marquee_int.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_set_logo_string.cs" />
@@ -129,7 +134,9 @@
     <Compile Include="VlcManager.CreateNewMediaFromPath.cs" />
     <Compile Include="VlcManager.DetachEvent.cs" />
     <Compile Include="VlcManager.GetAudioFilterList.cs" />
+    <Compile Include="VlcManager.GetVideoAdjust.cs" />
     <Compile Include="VlcManager.GetVideoLogo.cs" />
+    <Compile Include="VlcManager.SetVideoAdjust.cs" />
     <Compile Include="VlcManager.SetVideoLogo.cs" />
     <Compile Include="VlcManager.SetVideoMarquee.cs" />
     <Compile Include="VlcManager.GetVideoMarquee.cs" />

@@ -15,6 +15,7 @@ namespace Vlc.DotNet.Core
             Tracks = new VideoTracks(manager, mediaPlayerInstance);
             Marquee = new MarqueeManagement(manager, mediaPlayerInstance);
             Logo = new LogoManagement(manager, mediaPlayerInstance);
+            Adjustments = new AdjustmentsManagement(manager, mediaPlayerInstance);
         }
 
         public string CropGeometry
@@ -38,5 +39,6 @@ namespace Vlc.DotNet.Core
 
         public IMarqueeManagement Marquee { get; private set; }
         public ILogoManagement Logo { get; private set; }
+        public IAdjustmentsManagement Adjustments { get; private set; }
     }
 }

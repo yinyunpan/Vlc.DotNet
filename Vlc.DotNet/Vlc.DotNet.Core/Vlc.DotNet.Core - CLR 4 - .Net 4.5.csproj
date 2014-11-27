@@ -59,8 +59,10 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdjustmentsManagement.cs" />
     <Compile Include="ChapterManagement.cs" />
     <Compile Include="FilterModuleDescription.cs" />
+    <Compile Include="IAdjustmentsManagement.cs" />
     <Compile Include="IChapterManagement.cs" />
     <Compile Include="ILogoManagement.cs" />
     <Compile Include="IMarqueeManagement.cs" />
