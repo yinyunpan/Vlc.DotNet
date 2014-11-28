@@ -16,5 +16,16 @@ namespace Vlc.DotNet.Core
         }
 
         public IAudioOutputsManagement Outputs { get; private set; }
+
+        public bool IsMute
+        {
+            get { return myManager.IsMute(myMediaPlayer); }
+            set { myManager.SetMute(myMediaPlayer, value); }
+        }
+
+        public void ToggleMute()
+        {
+            myManager.ToggleMute(myMediaPlayer);
+        }
     }
 }

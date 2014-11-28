@@ -74,6 +74,8 @@
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_get_stats.cs" />
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_track_info_t.cs" />
     <Compile Include="Signatures\libvlc_media.h\libvlc_media_stats_t.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_audio_toggle_mute.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_audio_set_mute.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_audio_output_channel_t.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_audio_output_device_count.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_audio_output_device_id.cs" />
@@ -81,6 +83,7 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_audio_output_list_get.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_audio_output_set.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_audio_output_list_release.cs" />
+    <Compile Include="Signatures\libvlc_media_player.h\libvlc_audio_get_mute.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_rectangle_t.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_audio_output_t.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_video_get_adjust_float.cs" />
@@ -145,6 +148,9 @@
     <Compile Include="VlcManager.CreateNewMediaFromPath.cs" />
     <Compile Include="VlcManager.DetachEvent.cs" />
     <Compile Include="VlcManager.GetAudioFilterList.cs" />
+    <Compile Include="VlcManager.ToggleMute.cs" />
+    <Compile Include="VlcManager.SetMute.cs" />
+    <Compile Include="VlcManager.IsMute.cs" />
     <Compile Include="VlcManager.ReleaseTrackDescription.cs" />
     <Compile Include="VlcManager.SetAudioOutputDevice.cs" />
     <Compile Include="VlcManager.GetAudioOutputDeviceName.cs" />
