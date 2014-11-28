@@ -12,7 +12,7 @@ namespace Vlc.DotNet.Core
         {
             myManager = manager;
             myMediaPlayer = mediaPlayerInstance;
-            Tracks = new TracksManagement(manager, mediaPlayerInstance);
+            Tracks = new VideoTracksManagement(manager, mediaPlayerInstance);
             Marquee = new MarqueeManagement(manager, mediaPlayerInstance);
             Logo = new LogoManagement(manager, mediaPlayerInstance);
             Adjustments = new AdjustmentsManagement(manager, mediaPlayerInstance);

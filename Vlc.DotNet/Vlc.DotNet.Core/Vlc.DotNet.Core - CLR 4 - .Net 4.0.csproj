@@ -65,6 +65,7 @@
     <Compile Include="AudioOutputDevice.cs" />
     <Compile Include="AudioOutputDevices.cs" />
     <Compile Include="AudioOutputsManagement.cs" />
+    <Compile Include="AudioTracksManagement.cs" />
     <Compile Include="ChapterManagement.cs" />
     <Compile Include="FilterModuleDescription.cs" />
     <Compile Include="IAdjustmentsManagement.cs" />
@@ -83,8 +84,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubTitlesManagement.cs" />
     <Compile Include="TrackDescription.cs" />
-    <Compile Include="TracksManagement.cs" />
     <Compile Include="VideoManagement.cs" />
+    <Compile Include="VideoTracksManagement.cs" />
     <Compile Include="VlcMediaPlayer\VlcMediaPlayer.cs" />
     <Compile Include="VlcMediaPlayer\VlcMediaPlayer.Events.Bacward.cs" />
     <Compile Include="VlcMediaPlayer\VlcMediaPlayer.Events.Buffering.cs" />

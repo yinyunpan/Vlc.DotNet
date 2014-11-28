@@ -13,6 +13,7 @@ namespace Vlc.DotNet.Core
             myManager = manager;
             myMediaPlayer = mediaPlayerInstance;
             Outputs = new AudioOutputsManagement(manager, mediaPlayerInstance);
+            Tracks = new AudioTracksManagement(manager, mediaPlayerInstance);
         }
 
         public IAudioOutputsManagement Outputs { get; private set; }
@@ -26,6 +27,26 @@ namespace Vlc.DotNet.Core
         public void ToggleMute()
         {
             myManager.ToggleMute(myMediaPlayer);
+        }
+
+        public int Volume
+        {
+            get { return myManager.GetVolume(myMediaPlayer); }
+            set { myManager.SetVolume(myMediaPlayer, value); }
+        }
+
+        public ITracksManagement Tracks { get; private set; }
+
+        public int Channel
+        {
+            get { return myManager.GetAudioChannel(myMediaPlayer); }
+            set { myManager.SetAudioChannel(myMediaPlayer, value); }
+        }
+
+        public long Delay
+        {
+            get { return myManager.GetAudioDelay(myMediaPlayer); }
+            set { myManager.SetAudioDelay(myMediaPlayer, value); }
         }
     }
 }
