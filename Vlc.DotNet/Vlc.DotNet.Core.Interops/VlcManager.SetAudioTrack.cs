@@ -5,18 +5,18 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public void SetAudioTrack(IntPtr mediaInstance, TrackDescriptionStructure trackDescription)
+        public void SetAudioTrack(VlcMediaPlayerInstance mediaPlayerInstance, TrackDescriptionStructure trackDescription)
         {
-            if (mediaInstance == IntPtr.Zero)
-                throw new ArgumentException("Media instance is not initialized.");
-            SetAudioTrack(mediaInstance, trackDescription.Id);
+            if (mediaPlayerInstance == IntPtr.Zero)
+                throw new ArgumentException("Media player instance is not initialized.");
+            SetAudioTrack(mediaPlayerInstance, trackDescription.Id);
         }
 
-        public void SetAudioTrack(IntPtr mediaInstance, int id)
+        public void SetAudioTrack(VlcMediaPlayerInstance mediaPlayerInstance, int id)
         {
-            if (mediaInstance == IntPtr.Zero)
-                throw new ArgumentException("Media instance is not initialized.");
-            GetInteropDelegate<SetAudioTrack>().Invoke(mediaInstance, id);
+            if (mediaPlayerInstance == IntPtr.Zero)
+                throw new ArgumentException("Media player instance is not initialized.");
+            GetInteropDelegate<SetAudioTrack>().Invoke(mediaPlayerInstance, id);
         }
     }
 }

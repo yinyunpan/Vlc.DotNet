@@ -5,7 +5,7 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public void DetachEvent(IntPtr eventManagerInstance, EventTypes eventType, EventCallback callback)
+        public void DetachEvent(VlcEventManagerInstance eventManagerInstance, EventTypes eventType, EventCallback callback)
         {
             if (eventManagerInstance == IntPtr.Zero)
                 throw new ArgumentException("Event manager is not initialized.");

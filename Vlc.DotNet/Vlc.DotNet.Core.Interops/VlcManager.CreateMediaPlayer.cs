@@ -5,9 +5,9 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public IntPtr CreateMediaPlayer()
+        public VlcMediaPlayerInstance CreateMediaPlayer()
         {
-            return GetInteropDelegate<CreateMediaPlayer>().Invoke(myVlcInstance);
+            return new VlcMediaPlayerInstance(this, GetInteropDelegate<CreateMediaPlayer>().Invoke(myVlcInstance));
         }
     }
 }

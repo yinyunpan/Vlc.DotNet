@@ -5,7 +5,7 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public void SetMute(IntPtr mediaPlayerInstance, bool status)
+        public void SetMute(VlcMediaPlayerInstance mediaPlayerInstance, bool status)
         {
             if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media player instance is not initialized.");

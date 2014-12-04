@@ -5,18 +5,18 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public void SetVideoSpu(IntPtr mediaInstance, TrackDescriptionStructure trackDescription)
+        public void SetVideoSpu(VlcMediaPlayerInstance mediaPlayerInstance, TrackDescriptionStructure trackDescription)
         {
-            if (mediaInstance == IntPtr.Zero)
+            if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media instance is not initialized.");
-            SetVideoSpu(mediaInstance, trackDescription.Id);
+            SetVideoSpu(mediaPlayerInstance, trackDescription.Id);
         }
 
-        public void SetVideoSpu(IntPtr mediaInstance, int id)
+        public void SetVideoSpu(VlcMediaPlayerInstance mediaPlayerInstance, int id)
         {
-            if (mediaInstance == IntPtr.Zero)
+            if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media instance is not initialized.");
-            GetInteropDelegate<SetVideoSpu>().Invoke(mediaInstance, id);
+            GetInteropDelegate<SetVideoSpu>().Invoke(mediaPlayerInstance, id);
         }
     }
 }

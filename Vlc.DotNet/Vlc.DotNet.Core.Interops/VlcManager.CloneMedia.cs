@@ -5,11 +5,11 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public IntPtr CloneMedia(IntPtr mediaInstance)
+        public VlcMediaInstance CloneMedia(VlcMediaInstance mediaInstance)
         {
             if (mediaInstance == IntPtr.Zero)
                 throw new ArgumentException("Media instance is not initialized.");
-            return GetInteropDelegate<CloneMedia>().Invoke(mediaInstance);
+            return new VlcMediaInstance(this, GetInteropDelegate<CloneMedia>().Invoke(mediaInstance));
         }
     }
 }

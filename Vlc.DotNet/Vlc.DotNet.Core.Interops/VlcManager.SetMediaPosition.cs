@@ -5,7 +5,7 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public void SetMediaPosition(IntPtr mediaPlayerInstance, float position)
+        public void SetMediaPosition(VlcMediaPlayerInstance mediaPlayerInstance, float position)
         {
             if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media player instance is not initialized.");

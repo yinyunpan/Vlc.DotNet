@@ -7,18 +7,18 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public void AddOptionToMedia(IntPtr mediaInstance, string option)
+        public void AddOptionToMedia(VlcMediaInstance mediaInstance, string option)
         {
             if (mediaInstance == IntPtr.Zero)
                 throw new ArgumentException("Media instance is not initialized.");
             if (string.IsNullOrEmpty(option))
                 return;
-            var handle = GCHandle.Alloc(Encoding.UTF8.GetBytes(option), GCHandleType.Pinned);
+            var handle = GCHandle.Alloc(Encoding.ASCII.GetBytes(option), GCHandleType.Pinned);
             GetInteropDelegate<AddOptionToMedia>().Invoke(mediaInstance, handle.AddrOfPinnedObject());
             handle.Free();
         }
 
-        public void AddOptionToMedia(IntPtr mediaInstance, string[] options)
+        public void AddOptionToMedia(VlcMediaInstance mediaInstance, string[] options)
         {
             if (mediaInstance == IntPtr.Zero)
                 throw new ArgumentException("Media instance is not initialized.");

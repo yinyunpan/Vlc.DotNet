@@ -1,14 +1,14 @@
-﻿using System;
-using Vlc.DotNet.Core.Interops;
+﻿using Vlc.DotNet.Core.Interops;
+using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core
 {
     internal class VideoManagement : IVideoManagement
     {
         private readonly VlcManager myManager;
-        private readonly IntPtr myMediaPlayer;
+        private readonly VlcMediaPlayerInstance myMediaPlayer;
 
-        public VideoManagement(VlcManager manager, IntPtr mediaPlayerInstance)
+        public VideoManagement(VlcManager manager, VlcMediaPlayerInstance mediaPlayerInstance)
         {
             myManager = manager;
             myMediaPlayer = mediaPlayerInstance;

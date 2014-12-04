@@ -1,5 +1,4 @@
-﻿using System;
-using Vlc.DotNet.Core.Interops.Signatures;
+﻿using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core.Interops
 {
@@ -9,7 +8,7 @@ namespace Vlc.DotNet.Core.Interops
         {
             if (args == null)
                 args = new string[0];
-            myVlcInstance = GetInteropDelegate<CreateNewInstance>().Invoke(args.Length, args);
+            myVlcInstance = new VlcIntance(this, GetInteropDelegate<CreateNewInstance>().Invoke(args.Length, args));
         }
     }
 }

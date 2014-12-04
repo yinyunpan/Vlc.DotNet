@@ -1,12 +1,12 @@
-﻿using System;
-using Vlc.DotNet.Core.Interops;
+﻿using Vlc.DotNet.Core.Interops;
+using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core
 {
     public sealed class AudioOutputDevice
     {
         private VlcManager myManager;
-        private IntPtr myMediaPlayerInstance;
+        private VlcMediaPlayerInstance myMediaPlayerInstance;
         private AudioOutputDescription myAudioOutputDescription;
 
         public int Id { get; private set; }
@@ -27,7 +27,7 @@ namespace Vlc.DotNet.Core
             }
         }
 
-        internal AudioOutputDevice(VlcManager manager, IntPtr mediaPlayerInstance, AudioOutputDescription audioDescription, int id)
+        internal AudioOutputDevice(VlcManager manager, VlcMediaPlayerInstance mediaPlayerInstance, AudioOutputDescription audioDescription, int id)
         {
             myManager = manager;
             myMediaPlayerInstance = mediaPlayerInstance;

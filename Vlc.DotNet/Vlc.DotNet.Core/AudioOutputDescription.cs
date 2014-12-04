@@ -9,12 +9,12 @@ namespace Vlc.DotNet.Core
     public sealed class AudioOutputDescription
     {
         private VlcManager myManager;
-        private IntPtr myMediaPlayerInstance;
+        private VlcMediaPlayerInstance myMediaPlayerInstance;
 
         public string Name { get; private set; }
         public string Description { get; private set; }
 
-        internal AudioOutputDescription(string name, string description, VlcManager manager, IntPtr mediaPlayerInstance)
+        internal AudioOutputDescription(string name, string description, VlcManager manager, VlcMediaPlayerInstance mediaPlayerInstance)
         {
             Name = name;
             Description = description;
@@ -23,7 +23,7 @@ namespace Vlc.DotNet.Core
             Devices = new AudioOutputDevices(this, manager, myMediaPlayerInstance);
         }
 
-        internal static List<AudioOutputDescription> GetSubOutputDescription(AudioOutputDescriptionStructure module, VlcManager manager, IntPtr mediaPlayerInstance)
+        internal static List<AudioOutputDescription> GetSubOutputDescription(AudioOutputDescriptionStructure module, VlcManager manager, VlcMediaPlayerInstance mediaPlayerInstance)
         {
             var result = new List<AudioOutputDescription>();
             result.Add(new AudioOutputDescription(module.Name, module.Description, manager, mediaPlayerInstance));

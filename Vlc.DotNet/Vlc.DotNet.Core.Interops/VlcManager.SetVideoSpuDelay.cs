@@ -5,7 +5,7 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public void SetVideoSpuDelay(IntPtr mediaPlayerInstance, long delay)
+        public void SetVideoSpuDelay(VlcMediaPlayerInstance mediaPlayerInstance, long delay)
         {
             if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media player instance is not initialized.");

@@ -5,7 +5,7 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public int GetVideoTeletext(IntPtr mediaPlayerInstance)
+        public int GetVideoTeletext(VlcMediaPlayerInstance mediaPlayerInstance)
         {
             if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media player instance is not initialized.");

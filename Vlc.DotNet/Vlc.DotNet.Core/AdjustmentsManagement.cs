@@ -1,14 +1,15 @@
 ﻿using System;
 using Vlc.DotNet.Core.Interops;
+using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core
 {
     internal class AdjustmentsManagement : IAdjustmentsManagement
     {
         private readonly VlcManager myManager;
-        private readonly IntPtr myMediaPlayer;
+        private readonly VlcMediaPlayerInstance myMediaPlayer;
 
-        public AdjustmentsManagement(VlcManager manager, IntPtr mediaPlayerInstance)
+        public AdjustmentsManagement(VlcManager manager, VlcMediaPlayerInstance mediaPlayerInstance)
         {
             myManager = manager;
             myMediaPlayer = mediaPlayerInstance;

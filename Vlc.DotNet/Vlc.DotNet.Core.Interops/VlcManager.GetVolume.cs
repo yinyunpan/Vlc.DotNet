@@ -5,7 +5,7 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public int GetVolume(IntPtr mediaPlayerInstance)
+        public int GetVolume(VlcMediaPlayerInstance mediaPlayerInstance)
         {
             if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media player instance is not initialized.");

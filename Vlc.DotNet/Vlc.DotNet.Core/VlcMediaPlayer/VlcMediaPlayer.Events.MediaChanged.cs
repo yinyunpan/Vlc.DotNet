@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using Vlc.DotNet.Core.Interops;
 using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core
@@ -21,7 +22,7 @@ namespace Vlc.DotNet.Core
                     return;
                 }
             }
-            OnMediaPlayerMediaChanged(new VlcMedia(this, args.MediaPlayerMediaChanged.MediaInstance));
+            OnMediaPlayerMediaChanged(new VlcMedia(this, new VlcMediaInstance(Manager, args.MediaPlayerMediaChanged.MediaInstance)));
         }
 
         public void OnMediaPlayerMediaChanged(VlcMedia media)

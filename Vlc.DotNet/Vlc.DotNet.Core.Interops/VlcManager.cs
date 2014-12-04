@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.InteropServices;
 using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager : VlcInteropsManager
     {
-        private IntPtr myVlcInstance;
-        private readonly object myStaticLocker = new object();
+        private VlcIntance myVlcInstance;
         private static readonly Dictionary<DirectoryInfo, VlcManager> myAllInstance = new Dictionary<DirectoryInfo, VlcManager>();
 
         public string VlcVersion
@@ -31,11 +29,7 @@ namespace Vlc.DotNet.Core.Interops
 
         public override void Dispose(bool disposing)
         {
-            if (myVlcInstance != IntPtr.Zero)
-            {
-                ReleaseInstance(myVlcInstance);
-                myVlcInstance = IntPtr.Zero;
-            }
+            myVlcInstance.Dispose();
             if (myAllInstance.ContainsValue(this))
             {
                 foreach (var kv in new Dictionary<DirectoryInfo, VlcManager>(myAllInstance))

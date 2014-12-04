@@ -1,14 +1,14 @@
-﻿using System;
-using Vlc.DotNet.Core.Interops;
+﻿using Vlc.DotNet.Core.Interops;
+using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core
 {
     internal class MarqueeManagement : IMarqueeManagement
     {
         private readonly VlcManager myManager;
-        private readonly IntPtr myMediaPlayer;
+        private readonly VlcMediaPlayerInstance myMediaPlayer;
 
-        public MarqueeManagement(VlcManager manager, IntPtr mediaPlayerInstance)
+        public MarqueeManagement(VlcManager manager, VlcMediaPlayerInstance mediaPlayerInstance)
         {
             myManager = manager;
             myMediaPlayer = mediaPlayerInstance;

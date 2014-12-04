@@ -7,7 +7,7 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public long GetMediaDuration(IntPtr mediaInstance)
+        public long GetMediaDuration(VlcMediaInstance mediaInstance)
         {
             if (mediaInstance == IntPtr.Zero)
                 throw new ArgumentException("Media instance is not initialized.");

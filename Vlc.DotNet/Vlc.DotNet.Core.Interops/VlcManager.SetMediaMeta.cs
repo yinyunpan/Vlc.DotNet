@@ -7,7 +7,7 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public void SetMediaMeta(IntPtr mediaInstance, MediaMetadatas metadata, string value)
+        public void SetMediaMeta(VlcMediaInstance mediaInstance, MediaMetadatas metadata, string value)
         {
             if (mediaInstance == IntPtr.Zero)
                 throw new ArgumentException("Media instance is not initialized.");

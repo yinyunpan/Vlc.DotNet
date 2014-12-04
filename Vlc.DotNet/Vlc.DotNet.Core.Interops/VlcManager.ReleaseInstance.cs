@@ -5,12 +5,12 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public void ReleaseInstance(IntPtr instance)
+        public void ReleaseInstance(VlcIntance instance)
         {
             if (instance == IntPtr.Zero)
                 return;
             GetInteropDelegate<ReleaseInstance>().Invoke(instance);
-            instance = IntPtr.Zero;
+            instance.Dispose();
         }
     }
 }

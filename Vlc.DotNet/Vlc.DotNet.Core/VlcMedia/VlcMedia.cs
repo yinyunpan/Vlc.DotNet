@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
+using Vlc.DotNet.Core.Interops;
 using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core
@@ -27,15 +27,15 @@ namespace Vlc.DotNet.Core
             RegisterEvents();
         }
 
-        internal VlcMedia(VlcMediaPlayer player, IntPtr ptr)
+        internal VlcMedia(VlcMediaPlayer player, VlcMediaInstance mediaInstance)
         {
-            MediaInstance = ptr;
+            MediaInstance = mediaInstance;
             myVlcMediaPlayer = player;
             myVlcMediaPlayer.Medias.Add(this);
             RegisterEvents();
         }
 
-        internal IntPtr MediaInstance { get; private set; }
+        internal VlcMediaInstance MediaInstance { get; private set; }
 
         public string Mrl
         {
@@ -64,7 +64,7 @@ namespace Vlc.DotNet.Core
             {
                 UnregisterEvents();
                 myVlcMediaPlayer.Manager.ReleaseMedia(MediaInstance);
-                MediaInstance = IntPtr.Zero;
+                MediaInstance.Dispose();
             }
         }
 

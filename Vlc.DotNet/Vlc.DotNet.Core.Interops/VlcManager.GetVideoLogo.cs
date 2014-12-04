@@ -5,44 +5,44 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public bool GetVideoLogoEnabled(IntPtr mediaPlayerInstance)
+        public bool GetVideoLogoEnabled(VlcMediaPlayerInstance mediaPlayerInstance)
         {
             if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media player instance is not initialized.");
             return GetInteropDelegate<GetVideoLogoInteger>().Invoke(mediaPlayerInstance, VideoLogoOptions.Enable) == 1;
         }
 
-        public int GetVideoLogoX(IntPtr mediaPlayerInstance)
+        public int GetVideoLogoX(VlcMediaPlayerInstance mediaPlayerInstance)
         {
             if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media player instance is not initialized.");
             return GetInteropDelegate<GetVideoLogoInteger>().Invoke(mediaPlayerInstance, VideoLogoOptions.X);
         }
-        public int GetVideoLogoY(IntPtr mediaPlayerInstance)
+        public int GetVideoLogoY(VlcMediaPlayerInstance mediaPlayerInstance)
         {
             if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media player instance is not initialized.");
             return GetInteropDelegate<GetVideoLogoInteger>().Invoke(mediaPlayerInstance, VideoLogoOptions.Y);
         }
-        public int GetVideoLogoDelay(IntPtr mediaPlayerInstance)
+        public int GetVideoLogoDelay(VlcMediaPlayerInstance mediaPlayerInstance)
         {
             if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media player instance is not initialized.");
             return GetInteropDelegate<GetVideoLogoInteger>().Invoke(mediaPlayerInstance, VideoLogoOptions.Delay);
         }
-        public int GetVideoLogoRepeat(IntPtr mediaPlayerInstance)
+        public int GetVideoLogoRepeat(VlcMediaPlayerInstance mediaPlayerInstance)
         {
             if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media player instance is not initialized.");
             return GetInteropDelegate<GetVideoLogoInteger>().Invoke(mediaPlayerInstance, VideoLogoOptions.Repeat);
         }
-        public int GetVideoLogoOpacity(IntPtr mediaPlayerInstance)
+        public int GetVideoLogoOpacity(VlcMediaPlayerInstance mediaPlayerInstance)
         {
             if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media player instance is not initialized.");
             return GetInteropDelegate<GetVideoLogoInteger>().Invoke(mediaPlayerInstance, VideoLogoOptions.Opacity);
         }
-        public int GetVideoLogoPosition(IntPtr mediaPlayerInstance)
+        public int GetVideoLogoPosition(VlcMediaPlayerInstance mediaPlayerInstance)
         {
             if (mediaPlayerInstance == IntPtr.Zero)
                 throw new ArgumentException("Media player instance is not initialized.");

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
+﻿using System.Collections.Generic;
 using Vlc.DotNet.Core.Interops;
 using Vlc.DotNet.Core.Interops.Signatures;
 
@@ -9,9 +7,9 @@ namespace Vlc.DotNet.Core
     internal sealed class SubTitlesManagement : ISubTitlesManagement, IEnumerableManagement<TrackDescription>
     {
         private readonly VlcManager myManager;
-        private readonly IntPtr myMediaPlayer;
+        private readonly VlcMediaPlayerInstance myMediaPlayer;
 
-        public SubTitlesManagement(VlcManager manager, IntPtr mediaPlayerInstance)
+        public SubTitlesManagement(VlcManager manager, VlcMediaPlayerInstance mediaPlayerInstance)
         {
             myManager = manager;
             myMediaPlayer = mediaPlayerInstance;

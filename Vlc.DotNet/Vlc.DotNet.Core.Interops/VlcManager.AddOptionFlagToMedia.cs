@@ -7,7 +7,7 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public void AddOptionFlagToMedia(IntPtr mediaInstance, string option, uint flag)
+        public void AddOptionFlagToMedia(VlcMediaInstance mediaInstance, string option, uint flag)
         {
             if (mediaInstance == IntPtr.Zero)
                 throw new ArgumentException("Media instance is not initialized.");

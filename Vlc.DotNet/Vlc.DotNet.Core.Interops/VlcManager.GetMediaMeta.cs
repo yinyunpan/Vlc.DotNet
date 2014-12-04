@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using System.Text;
 using Vlc.DotNet.Core.Interops.Signatures;
 
 namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public string GetMediaMeta(IntPtr mediaInstance, MediaMetadatas metadata)
+        public string GetMediaMeta(VlcMediaInstance mediaInstance, MediaMetadatas metadata)
         {
             if (mediaInstance == IntPtr.Zero)
                 throw new ArgumentException("Media instance is not initialized.");

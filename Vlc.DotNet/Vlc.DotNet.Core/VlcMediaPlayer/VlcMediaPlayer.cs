@@ -10,7 +10,7 @@ namespace Vlc.DotNet.Core
 {
     public sealed partial class VlcMediaPlayer : IDisposable
     {
-        private IntPtr myMediaPlayer;
+        private VlcMediaPlayerInstance myMediaPlayer;
 
         public VlcMediaPlayer(DirectoryInfo vlcLibDirectory)
             : this(VlcManager.GetInstance(vlcLibDirectory))
@@ -21,7 +21,15 @@ namespace Vlc.DotNet.Core
         {
             Medias = new Collection<VlcMedia>();
             Manager = manager;
+#if DEBUG
+            Manager.CreateNewInstance(new[]
+            {
+                "--extraintf=logger",
+                "--verbose=2"
+            });
+#else
             Manager.CreateNewInstance(null);
+#endif
             myMediaPlayer = manager.CreateMediaPlayer();
             RegisterEvents();
             Chapters = new ChapterManagement(manager, myMediaPlayer);
@@ -56,7 +64,7 @@ namespace Vlc.DotNet.Core
 
             UnregisterEvents();
             Manager.ReleaseMediaPlayer(myMediaPlayer);
-            myMediaPlayer = IntPtr.Zero;
+            myMediaPlayer.Dispose();
         }
 
         ~VlcMediaPlayer()

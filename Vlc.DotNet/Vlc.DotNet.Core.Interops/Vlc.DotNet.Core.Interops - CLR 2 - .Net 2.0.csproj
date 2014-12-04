@@ -65,6 +65,7 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="LibVlcFunctionAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signatures\InteropObjectInstance.cs" />
     <Compile Include="Signatures\libvlc.h\libvlc_video_filter_list_get.cs" />
     <Compile Include="Signatures\libvlc.h\libvlc_audio_filter_list_get.cs" />
     <Compile Include="Signatures\libvlc.h\libvlc_module_description_list_release.cs" />
@@ -146,6 +147,8 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_set_chapter.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_track_description_t.cs" />
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_navigate_mode_t.cs" />
+    <Compile Include="VlcEventManagerInstance.cs" />
+    <Compile Include="VlcIntance.cs" />
     <Compile Include="VlcManager.AddOptionFlagToMedia.cs" />
     <Compile Include="VlcManager.AddOptionToMedia.cs" />
     <Compile Include="VlcManager.AttachEvent.cs" />
@@ -291,6 +294,10 @@
     <Compile Include="Signatures\libvlc_media_player.h\libvlc_media_player_will_play.cs" />
     <Compile Include="VlcInteropsManager.cs" />
     <Compile Include="VlcManager.cs" />
+    <Compile Include="VlcMediaEventManagerInstance.cs" />
+    <Compile Include="VlcMediaInstance.cs" />
+    <Compile Include="VlcMediaPlayerEventManagerInstance.cs" />
+    <Compile Include="VlcMediaPlayerInstance.cs" />
     <Compile Include="Win32Interops.cs" />
   </ItemGroup>
   <ItemGroup>

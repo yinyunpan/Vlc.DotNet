@@ -75,34 +75,14 @@ namespace Vlc.DotNet.Forms
             myVlcMediaPlayer.Play();
         }
 
-#if NET20
-        public void Play(FileInfo file)
-        {
-            EndInit();
-            Play(file, null);
-        }
-
-        public void Play(FileInfo file, string[] options)
-#else
         public void Play(FileInfo file, params string[] options)
-#endif
         {
             EndInit();
             myVlcMediaPlayer.SetMedia(file, options);
             Play();
         }
 
-#if NET20
-        public void Play(Uri uri)
-        {
-            EndInit();
-            Play(uri, null);
-        }
-
-        public void Play(Uri uri, string[] options)
-#else
         public void Play(Uri uri, params string[] options)
-#endif
         {
             EndInit();
             myVlcMediaPlayer.SetMedia(uri, options);

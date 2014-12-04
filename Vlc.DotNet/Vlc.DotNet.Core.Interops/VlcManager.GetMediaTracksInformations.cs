@@ -6,7 +6,7 @@ namespace Vlc.DotNet.Core.Interops
 {
     public sealed partial class VlcManager
     {
-        public MediaTrackInfosStructure[] GetMediaTracksInformations(IntPtr mediaInstance)
+        public MediaTrackInfosStructure[] GetMediaTracksInformations(VlcMediaInstance mediaInstance)
         {
             if (mediaInstance == IntPtr.Zero)
                 throw new ArgumentException("Media instance is not initialized.");
