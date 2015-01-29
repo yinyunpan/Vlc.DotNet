@@ -38,7 +38,11 @@ namespace Vlc.DotNet.Forms.Samples
 
         private void OnButtonPlayClicked(object sender, EventArgs e)
         {
-            myVlcRincewindControl.Play(new FileInfo(@"..\..\..\Vlc.DotNet\Samples\Videos\BBB trailer.mov"));
+            //myVlcRincewindControl.Play(new FileInfo(@"..\..\..\Vlc.DotNet\Samples\Videos\BBB trailer.mov"));
+            myVlcRincewindControl.Play(new Uri("rtsp://alive.rbc.cn/fm1006"),
+                new string[] { "rtsp-tcp" });
+            //唉，原因呀，靠自己摸索
+            // VlcContext.StartupOptions.AddOption("--rtsp-tcp"); 
         }
 
         private void OnButtonStopClicked(object sender, EventArgs e)
